@@ -6,12 +6,7 @@ GemBox.Email is a .NET component that enables developers to read and write email
 
 [GemBox.Email Free](https://www.gemboxsoftware.com/email/free-version) is free of charge while [GemBox.Email Professional](https://www.gemboxsoftware.com/email/pricelist) is a commercial version licensed per developer. Server deployment is royalty free.
 
-<p align="center">
-  <br>
-  <a title="Download GemBox.Email Examples source code" href="https://github.com/gemboxsoftware-dev-team/GemBox.Email.Examples/archive/master.zip">
-    <img src="https://www.gemboxsoftware.com/Images/download.png" />
-  </a>
-</p>
+[![Download GemBox.Email Examples source code](https://www.gemboxsoftware.com/Images/download.png)](https://github.com/gemboxsoftware-dev-team/GemBox.Email.Examples/archive/master.zip)
 
 This repository contains the source code of GemBox.Email example projects. The demos or live examples are available online on:  
 [GemBox.Email - C# / VB.NET Outlook - Examples](https://www.gemboxsoftware.com/email/examples/c-sharp-vb-net-email-library/201)
