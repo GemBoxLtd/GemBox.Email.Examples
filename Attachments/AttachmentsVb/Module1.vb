@@ -10,8 +10,7 @@ Module Module1
         ComponentInfo.SetLicense("FREE-LIMITED-KEY")
 
         ' Create New message with specified 'from' and 'to' addresses
-        Dim message As New MailMessage(New MailAddress("sender@example.com"),
-                                       New MailAddress("receiver@example.com"))
+        Dim message As New MailMessage("sender@example.com", "receiver@example.com")
 
         ' Set subject And text body
         message.Subject = "Test email message with attachments"

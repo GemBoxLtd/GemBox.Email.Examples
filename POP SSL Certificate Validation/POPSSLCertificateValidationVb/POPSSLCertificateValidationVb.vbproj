@@ -43,8 +43,8 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="GemBox.Email, Version=11.3.30.1027, Culture=neutral, PublicKeyToken=b1b72c69714d4847, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\GemBox.Email.11.3.30.1027\lib\net30\GemBox.Email.dll</HintPath>
+    <Reference Include="GemBox.Email, Version=11.3.30.1034, Culture=neutral, PublicKeyToken=b1b72c69714d4847, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\GemBox.Email.11.3.30.1034\lib\net30\GemBox.Email.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />

@@ -18,8 +18,7 @@ class Program
             Console.WriteLine("Authenticated.");
 
             // Create new message
-            MailMessage message = new MailMessage(new MailAddress("sender@example.com"),
-                                                  new MailAddress("receiver@example.com"));
+            MailMessage message = new MailMessage("sender@example.com", "receiver@example.com");
             message.Subject = "SMTP test message";
             message.BodyText = "This is test message body.";
 

@@ -18,8 +18,7 @@ Module Module1
             Console.WriteLine("Authenticated.")
 
             ' Create New message
-            Dim message As New MailMessage(New MailAddress("sender@example.com"),
-                                           New MailAddress("receiver@example.com"))
+            Dim message As New MailMessage("sender@example.com", "receiver@example.com")
             message.Subject = "SMTP test message"
             message.BodyText = "This is test message body."
 

@@ -9,8 +9,7 @@ class Program
         ComponentInfo.SetLicense("FREE-LIMITED-KEY");
 
         // Create new message with specified 'from' and 'to' addresses
-        MailMessage message = new MailMessage(new MailAddress("sender@example.com"),
-                                              new MailAddress("receiver@example.com"));
+        MailMessage message = new MailMessage("sender@example.com", "receiver@example.com");
 
         // Set subject and text body
         message.Subject = "Test email message with text body";
