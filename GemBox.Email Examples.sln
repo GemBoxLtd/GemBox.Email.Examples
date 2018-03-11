@@ -305,6 +305,40 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Calendar Add", "Calendar Add", "{91A5933E-6C90-4675-B58F-529194B87D01}"
+	ProjectSection(SolutionItems) = preProject
+		Calendar Add\README.md = Calendar Add\README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Calendar Load", "Calendar Load", "{13A59861-01AE-4278-A92C-B363AA60671B}"
+	ProjectSection(SolutionItems) = preProject
+		Calendar Load\README.md = Calendar Load\README.md
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Calendar Save", "Calendar Save", "{3706406D-6D48-401D-B638-9A09CDBF1E80}"
+	ProjectSection(SolutionItems) = preProject
+		Calendar Save\README.md = Calendar Save\README.md
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalendarAddCs", "Calendar Add\CalendarAddCs\CalendarAddCs.csproj", "{E1D2A981-AFA8-4051-800F-6C5582B0DFA7}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CalendarAddVb", "Calendar Add\CalendarAddVb\CalendarAddVb.vbproj", "{56527B1E-C67D-4D69-82C5-B6CCF0461873}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalendarLoadCs", "Calendar Load\CalendarLoadCs\CalendarLoadCs.csproj", "{B0F9F2F0-677D-4522-9454-01D5B47B6BBD}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CalendarLoadVb", "Calendar Load\CalendarLoadVb\CalendarLoadVb.vbproj", "{7CDB2DB1-3248-4B27-9490-DDFF829467AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalendarSaveCs", "Calendar Save\CalendarSaveCs\CalendarSaveCs.csproj", "{62DBC637-E1B2-4A83-8E84-D822727971D5}"
+EndProject
+Project("{F184B08F-C81C-45F6-A57F-5ABD9991F28F}") = "CalendarSaveVb", "Calendar Save\CalendarSaveVb\CalendarSaveVb.vbproj", "{3AE3A8E6-6C50-43F3-8FCA-DB11E409BF04}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ASP.NET Core", "ASP.NET Core", "{1724BC1C-EDEC-43E4-85C1-7477D9998F0E}"
+	ProjectSection(SolutionItems) = preProject
+		ASP.NET Core\README.md = ASP.NET Core\README.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Gembox.SaveMessage", "ASP.NET Core\Gembox.SaveMessageCs\Gembox.SaveMessage.csproj", "{CCDECFA9-F83E-44FB-8EBA-E4FDE2FB057A}"
+EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True
@@ -579,6 +613,34 @@ Global
 		{7F81FAA9-3BBC-46E5-A97F-DDA4D8074226}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7F81FAA9-3BBC-46E5-A97F-DDA4D8074226}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7F81FAA9-3BBC-46E5-A97F-DDA4D8074226}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1D2A981-AFA8-4051-800F-6C5582B0DFA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1D2A981-AFA8-4051-800F-6C5582B0DFA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1D2A981-AFA8-4051-800F-6C5582B0DFA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1D2A981-AFA8-4051-800F-6C5582B0DFA7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56527B1E-C67D-4D69-82C5-B6CCF0461873}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56527B1E-C67D-4D69-82C5-B6CCF0461873}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56527B1E-C67D-4D69-82C5-B6CCF0461873}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56527B1E-C67D-4D69-82C5-B6CCF0461873}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0F9F2F0-677D-4522-9454-01D5B47B6BBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0F9F2F0-677D-4522-9454-01D5B47B6BBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0F9F2F0-677D-4522-9454-01D5B47B6BBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0F9F2F0-677D-4522-9454-01D5B47B6BBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7CDB2DB1-3248-4B27-9490-DDFF829467AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7CDB2DB1-3248-4B27-9490-DDFF829467AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7CDB2DB1-3248-4B27-9490-DDFF829467AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7CDB2DB1-3248-4B27-9490-DDFF829467AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62DBC637-E1B2-4A83-8E84-D822727971D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62DBC637-E1B2-4A83-8E84-D822727971D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62DBC637-E1B2-4A83-8E84-D822727971D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62DBC637-E1B2-4A83-8E84-D822727971D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3AE3A8E6-6C50-43F3-8FCA-DB11E409BF04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3AE3A8E6-6C50-43F3-8FCA-DB11E409BF04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3AE3A8E6-6C50-43F3-8FCA-DB11E409BF04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3AE3A8E6-6C50-43F3-8FCA-DB11E409BF04}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCDECFA9-F83E-44FB-8EBA-E4FDE2FB057A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCDECFA9-F83E-44FB-8EBA-E4FDE2FB057A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCDECFA9-F83E-44FB-8EBA-E4FDE2FB057A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCDECFA9-F83E-44FB-8EBA-E4FDE2FB057A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -650,5 +712,15 @@ Global
 		{7C1DEA57-F2E4-4265-81FF-041B6C9DFB62} = {0F39E6D6-F9A9-44DB-B40B-BBB4B20E4C23}
 		{170F2E4C-357F-4BF2-BBC9-492A9F0B3285} = {14FBB181-AE22-4A5B-81F8-92685D5B8475}
 		{7F81FAA9-3BBC-46E5-A97F-DDA4D8074226} = {14FBB181-AE22-4A5B-81F8-92685D5B8475}
+		{E1D2A981-AFA8-4051-800F-6C5582B0DFA7} = {91A5933E-6C90-4675-B58F-529194B87D01}
+		{56527B1E-C67D-4D69-82C5-B6CCF0461873} = {91A5933E-6C90-4675-B58F-529194B87D01}
+		{B0F9F2F0-677D-4522-9454-01D5B47B6BBD} = {13A59861-01AE-4278-A92C-B363AA60671B}
+		{7CDB2DB1-3248-4B27-9490-DDFF829467AF} = {13A59861-01AE-4278-A92C-B363AA60671B}
+		{62DBC637-E1B2-4A83-8E84-D822727971D5} = {3706406D-6D48-401D-B638-9A09CDBF1E80}
+		{3AE3A8E6-6C50-43F3-8FCA-DB11E409BF04} = {3706406D-6D48-401D-B638-9A09CDBF1E80}
+		{CCDECFA9-F83E-44FB-8EBA-E4FDE2FB057A} = {1724BC1C-EDEC-43E4-85C1-7477D9998F0E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {FD3FADED-FCAE-4158-886E-F9BDB3C02DBF}
 	EndGlobalSection
 EndGlobal
