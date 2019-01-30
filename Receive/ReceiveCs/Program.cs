@@ -1,37 +1,73 @@
 using System;
-using System.Globalization;
 using GemBox.Email;
 using GemBox.Email.Pop;
+using GemBox.Email.Imap;
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
+    {
+        Example1();
+        Example2();
+    }
+
+    static void Example1()
     {
         // If using Professional version, put your serial key below.
         ComponentInfo.SetLicense("FREE-LIMITED-KEY");
 
-        using (PopClient pop = new PopClient("<ADDRESS> (e.g. pop.gmail.com)"))
+        // Create POP client.
+        using (var pop = new PopClient("<ADDRESS> (e.g. pop.gmail.com)"))
         {
+            //  Connect and sign to POP server.
             pop.Connect();
-            Console.WriteLine("Connected.");
-
             pop.Authenticate("<USERNAME>", "<PASSWORD>");
-            Console.WriteLine("Authenticated.");
 
-            // Read the number of currently available email messages on the server.
+            // Read the number of currently available emails on the server.
             int count = pop.GetCount();
-            Console.WriteLine("Number of available messages: " + count);
 
-            // Write table header
-            Console.WriteLine();
-            Console.WriteLine(" NO. |         DATE        |        SUBJECT");
-            Console.WriteLine("--------------------------------------------------");
+            Console.WriteLine(" NO. |     DATE     |          SUBJECT          ");
+            Console.WriteLine("------------------------------------------------");
 
-            // Receive (download) and list all email messages.
-            for (int i = 1; i <= count; i++)
+            // Download and receive all email messages.
+            for (int number = 1; number <= count; number++)
             {
-                MailMessage message = pop.GetMessage(i);
-                Console.WriteLine("  {0,-2} | {1} | {2}", i, message.Date.ToString(CultureInfo.InvariantCulture), message.Subject);
+                MailMessage message = pop.GetMessage(number);
+
+                // Read and display email's date and subject.
+                Console.WriteLine($"  {number}  |  {message.Date.ToShortDateString()}  |  {message.Subject}");
+            }
+        }
+    }
+
+    static void Example2()
+    {
+        // If using Professional version, put your serial key below.
+        ComponentInfo.SetLicense("FREE-LIMITED-KEY");
+
+        // Create IMAP client.
+        using (var imap = new ImapClient("<ADDRESS> (e.g. imap.gmail.com)"))
+        {
+            //  Connect and sign to IMAP server.
+            imap.Connect();
+            imap.Authenticate("<USERNAME>", "<PASSWORD>");
+
+            // Select INBOX folder.
+            imap.SelectInbox();
+
+            // Read the number of currently available emails in selected mailbox folder.
+            int count = imap.SelectedFolder.Count;
+
+            Console.WriteLine(" NO. |     DATE     |          SUBJECT          ");
+            Console.WriteLine("------------------------------------------------");
+
+            // Download and receive all email messages from selected mailbox folder.
+            for (int number = 1; number <= count; number++)
+            {
+                MailMessage message = imap.GetMessage(number);
+
+                // Read and display email's date and subject.
+                Console.WriteLine($"  {number}  |  {message.Date.ToShortDateString()}  |  {message.Subject}");
             }
         }
     }

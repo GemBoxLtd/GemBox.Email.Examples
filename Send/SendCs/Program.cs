@@ -1,57 +1,36 @@
-using System;
-using GemBox.Email;
+﻿using GemBox.Email;
 using GemBox.Email.Smtp;
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
         // If using Professional version, put your serial key below.
         ComponentInfo.SetLicense("FREE-LIMITED-KEY");
 
-        Console.WriteLine("Creating message...");
+        // Create new email message.
+        MailMessage message = new MailMessage(
+            new MailAddress("sender@example.com", "Sender"),
+            new MailAddress("first.receiver@example.com", "First receiver"),
+            new MailAddress("second.receiver@example.com", "Second receiver"));
 
-        // Create new email message
-        MailMessage message = new MailMessage(new MailAddress("sender@example.com", "Sender"),
-                                              new MailAddress("first.receiver@example.com", "First receiver"));
+        // Add additional receivers.
+        message.Cc.Add(
+            new MailAddress("third.receiver@example.com", "Third receiver"),
+            new MailAddress("fourth.receiver@example.com", "Fourth receiver"));
 
-        // Add second receiver to CC and set subject
-        message.Cc.Add(new MailAddress("second.receiver@example.com", "Second receiver"));
-        message.Subject = "GemBox.Email .NET component";
+        // Add subject and body.
+        message.Subject = "Send Email in C# / VB.NET / ASP.NET";
+        message.BodyText = "Hi 👋,\n" +
+            "This message was created and sent with GemBox.Email.\n" +
+            "Read more about it on https://www.gemboxsoftware.com/email";
 
-        // Add HTML and text body
-        message.BodyHtml = "<html>" +
-                              "<body>" +
-                                 "<p>Hi!<br/><br/>This message was created and sent with " +
-                                    "<b>GemBox.Email .NET component</b>.<br/>" +
-                                    "More info can be found at <a href=\"http://www.gemboxsoftware.com/\">" +
-                                    "GemBox Software website</a>." +
-                                 "</p>" +
-                              "</body>" +
-                           "</html>";
-
-        message.BodyText = "Hi!\r\n" +
-                           "\r\n" +
-                           "This message was created and sent with GemBox.Email .NET component.\r\n" +
-                           "More info can be found at http://www.gemboxsoftware.com/.";
-
-        // Add attachment
-        message.Attachments.Add(new Attachment("Picture.jpg"));
-
-        Console.WriteLine("Sending message...");
-
-        // Initialize new SMTP client and send an email message
+        // Create new SMTP client and send an email message.
         using (SmtpClient smtp = new SmtpClient("<ADDRESS> (e.g. smtp.gmail.com)"))
         {
             smtp.Connect();
-            Console.WriteLine("Connected.");
-
             smtp.Authenticate("<USERNAME>", "<PASSWORD>");
-            Console.WriteLine("Authenticated.");
-
             smtp.SendMessage(message);
         }
-
-        Console.WriteLine("Message sent successfully.");
     }
 }

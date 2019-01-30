@@ -1,44 +1,35 @@
 using System;
-using System.Text;
 using GemBox.Email;
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
         // If using Professional version, put your serial key below.
         ComponentInfo.SetLicense("FREE-LIMITED-KEY");
 
-        // Load message
+        // Load message from email file.
         MailMessage message = MailMessage.Load("Html.eml");
-        StringBuilder sb = new StringBuilder();
 
-        // Add date
-        sb.AppendLine(string.Format("Date: {0}", message.Date));
-
-        // Add addresses
-        sb.AppendLine(string.Format("From: {0}", message.From.ToString()));
-        sb.AppendLine(string.Format("To: {0}", message.To.ToString()));
+        // Read message information.
+        Console.WriteLine($"Date: {message.Date}");
+        Console.WriteLine($"Subject: {message.Subject}");
+        Console.WriteLine($"From: {message.From}");
+        Console.WriteLine($"To: {message.To}");
 
         if (message.Cc.Count > 0)
-            sb.AppendLine(string.Format("Cc: {0}", message.Cc.ToString()));
+            Console.WriteLine($"Cc: {message.Cc}");
 
         if (message.Bcc.Count > 0)
-            sb.AppendLine(string.Format("Bcc: {0}", message.Bcc.ToString()));
+            Console.WriteLine($"Bcc: {message.Bcc}");
 
         if (message.Attachments.Count > 0)
-            sb.AppendLine(string.Format("Attachments: {0}", message.Attachments.Count.ToString()));
+            Console.WriteLine($"Attachments: {message.Attachments.Count}");
 
-        // Add subject
-        sb.AppendLine(string.Format("Subject: {0}", message.Subject));
-
-        // Add message body
-        sb.AppendLine("------------------------------ BODY ------------------------------");
+        Console.WriteLine();
         if (string.IsNullOrEmpty(message.BodyHtml))
-            sb.Append(message.BodyText);
+            Console.WriteLine(message.BodyText);
         else
-            sb.Append(message.BodyHtml);
-
-        Console.WriteLine(sb.ToString());
+            Console.WriteLine(message.BodyHtml);
     }
 }

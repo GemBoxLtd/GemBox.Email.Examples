@@ -1,66 +1,60 @@
 using System;
-using System.Text;
 using GemBox.Email;
 using GemBox.Email.Calendar;
 
 class Program
 {
-    [STAThread]
-    static void Main(string[] args)
+    static void Main()
     {
         // If using Professional version, put your serial key below.
         ComponentInfo.SetLicense("FREE-LIMITED-KEY");
 
-        // Load calendar
+        // Load calendar.
         Calendar calendar = Calendar.Load("Simple.ics");
-        StringBuilder sb = new StringBuilder();
 
-        // Write a calendar method specifying what the calendar is used for.
-        sb.AppendLine(string.Format("Method: {0}", calendar.Method));
-
-        sb.AppendLine(string.Format("Count of events: {0}", calendar.Events.Count));
-        sb.AppendLine(string.Format("Count of tasks: {0}", calendar.Tasks.Count));
+        Console.WriteLine("CALENDAR");
+        Console.WriteLine($"Method: {calendar.Method}");
+        Console.WriteLine($"Events count: {calendar.Events.Count}");
+        Console.WriteLine($"Tasks count: {calendar.Tasks.Count}");
 
         // Iterate through all events.
-        foreach (Event e in calendar.Events)
+        Console.WriteLine();
+        foreach (Event ev in calendar.Events)
         {
-            sb.AppendLine("---------EVENT----------");
-            sb.AppendLine(string.Format("Organizer: {0}", e.Organizer));
-            sb.AppendLine(string.Format("Name: {0}", e.Name));
-            sb.AppendLine(string.Format("Start: {0:G}", e.Start));
-            sb.AppendLine(string.Format("End: {0:G}", e.End));
-
-            sb.AppendLine(string.Format("Count of reminders: {0}", e.Reminders.Count));
+            Console.WriteLine("- EVENT");
+            Console.WriteLine($"Organizer: {ev.Organizer}");
+            Console.WriteLine($"Name: {ev.Name}");
+            Console.WriteLine($"Start: {ev.Start:G}");
+            Console.WriteLine($"End: {ev.End:G}");
+            Console.WriteLine($"Reminders count: {ev.Reminders.Count}");
 
             // Iterate through all reminders.
-            foreach (Reminder reminder in e.Reminders)
+            foreach (Reminder reminder in ev.Reminders)
             {
-                sb.AppendLine("  --------REMINDER---------");
-                sb.AppendLine(string.Format("  Action: {0}", reminder.ReminderAction));
-                sb.AppendLine(string.Format("  Days to trigger before start: {0}", reminder.TriggerBeforeStart?.Days));
+                Console.WriteLine("-- REMINDER");
+                Console.WriteLine($"Action: {reminder.ReminderAction}");
+                Console.WriteLine($"Days to trigger before start: {reminder.TriggerBeforeStart?.Days}");
             }
         }
 
         // Iterate through all tasks.
+        Console.WriteLine();
         foreach (Task task in calendar.Tasks)
         {
-            sb.AppendLine("---------TASK-----------");
-            sb.AppendLine(string.Format("Organizer: {0}", task.Organizer));
-            sb.AppendLine(string.Format("Name: {0}", task.Name));
-            sb.AppendLine(string.Format("Start: {0:G}", task.Start));
-            sb.AppendLine(string.Format("Deadline: {0:G}", task.Deadline));
-
-            sb.AppendLine(string.Format("Count of reminders: {0}", task.Reminders.Count));
+            Console.WriteLine("- TASK");
+            Console.WriteLine($"Organizer: {task.Organizer}");
+            Console.WriteLine($"Name: {task.Name}");
+            Console.WriteLine($"Start: {task.Start:G}");
+            Console.WriteLine($"Deadline: {task.Deadline:G}");
+            Console.WriteLine($"Reminders count: {task.Reminders.Count}");
 
             // Iterate through all reminders.
             foreach (Reminder reminder in task.Reminders)
             {
-                sb.AppendLine("  --------REMINDER---------");
-                sb.AppendLine(string.Format("  Action: {0}", reminder.ReminderAction));
-                sb.AppendLine(string.Format("  Days to trigger before start: {0}", reminder.TriggerBeforeStart?.Days));
+                Console.WriteLine("-- REMINDER");
+                Console.WriteLine($"Action: {reminder.ReminderAction}");
+                Console.WriteLine($"Days to trigger before start: {reminder.TriggerBeforeStart?.Days}");
             }
         }
-
-        Console.WriteLine(sb.ToString());
     }
 }

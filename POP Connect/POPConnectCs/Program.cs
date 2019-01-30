@@ -4,21 +4,26 @@ using GemBox.Email.Pop;
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
         // If using Professional version, put your serial key below.
         ComponentInfo.SetLicense("FREE-LIMITED-KEY");
 
-        using (PopClient pop = new PopClient("<ADDRESS> (e.g. pop.gmail.com)"))
+        // Create new POP client.
+        using (var pop = new PopClient("<ADDRESS> (e.g. pop.gmail.com)"))
         {
-            // Connect to mail server
+            // By default the connect timeout is 5 sec.
+            pop.ConnectTimeout = TimeSpan.FromSeconds(4);
+
+            // Connect to POP server.
             pop.Connect();
             Console.WriteLine("Connected.");
 
-            // Authenticate with specified username and password
-            // (PopClient will use strongest possible authentication mechanism)
+            // Authenticate using the credentials; username and password.
             pop.Authenticate("<USERNAME>", "<PASSWORD>");
             Console.WriteLine("Authenticated.");
         }
+
+        Console.WriteLine("Disconnected.");
     }
 }

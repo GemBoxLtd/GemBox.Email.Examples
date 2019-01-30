@@ -5,7 +5,7 @@ using GemBox.Email.Imap;
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
         // If using Professional version, put your serial key below.
         ComponentInfo.SetLicense("FREE-LIMITED-KEY");
@@ -13,39 +13,30 @@ class Program
         using (ImapClient imap = new ImapClient("<ADDRESS> (e.g. imap.gmail.com)"))
         {
             imap.Connect();
-            Console.WriteLine("Connected.");
-
             imap.Authenticate("<USERNAME>", "<PASSWORD>");
-            Console.WriteLine("Authenticated.");
 
-            // For this example we will select INBOX folder
+            // Select INBOX folder.
             imap.SelectInbox();
 
-            // Get first message flags
-            IList<string> flags = imap.GetMessageFlags(1);
-
-            Console.WriteLine("Listing message flags...");
-
-            foreach (string flag in flags)
-                Console.WriteLine(' ' + flag);
-
-            // Add 'Draft' flag to message
+            // Add "Draft" flag to first message.
             imap.AddMessageFlags(1, ImapMessageFlags.Draft);
 
-            // List message flags again
-            Console.WriteLine("Listing message flags again...");
+            // Get first message flags and display them.
+            // Notice the presence of "Draft" flag.
+            IList<string> flags = imap.GetMessageFlags(1);
+            foreach (string flag in flags)
+                Console.WriteLine(flag);
 
-            foreach (string flag in imap.GetMessageFlags(1))
-                Console.WriteLine(' ' + flag);
-
-            // Remove 'Draft' flag
+            // Remove "Draft" flag from first message.
             imap.RemoveMessageFlags(1, ImapMessageFlags.Draft);
 
-            // Final message listing
-            Console.WriteLine("Final message flags listing...");
+            Console.WriteLine(new string('-', 10));
 
-            foreach (string flag in imap.GetMessageFlags(1))
-                Console.WriteLine(' ' + flag);
+            // Again, get first message flags and display them.
+            // Notice the absence of "Draft" flag.
+            flags = imap.GetMessageFlags(1);
+            foreach (string flag in flags)
+                Console.WriteLine(flag);
         }
     }
 }

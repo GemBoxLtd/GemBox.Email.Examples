@@ -1,45 +1,70 @@
 using System;
-using System.Collections.Generic;
 using GemBox.Email;
 using GemBox.Email.Mime;
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
+    {
+        Example1();
+        Example2();
+    }
+
+    static void Example1()
     {
         // If using Professional version, put your serial key below.
         ComponentInfo.SetLicense("FREE-LIMITED-KEY");
 
-        // Create new message
-        MailMessage message = new MailMessage(new MailAddress("sender@example.com"),
-                                              new MailAddress("receiver-1@example.com", "First"),
-                                              new MailAddress("receiver-2@example.com", "Second"));
+        // Create new message.
+        MailMessage message = new MailMessage("sender@example.com", "receiver@example.com");
 
-        // Get 'From' reference
+        // Get 'From' property and 'From' header.
         MailAddressCollection fromAddresses = message.From;
+        Header fromHeader = message.MimeEntity.Headers[HeaderId.From];
 
-        // Get 'To' header
-        Header headerTo = message.MimeEntity.Headers[HeaderId.To];
+        Console.WriteLine($"Original 'From' property value: {fromAddresses}");
 
-        Console.WriteLine("Original value of property 'To': " + message.To.ToString());
+        // Change 'From' header value.
+        fromHeader.Body = "new.sender@example.com";
 
-        // Change header value
-        headerTo.Body = "new.receiver@example.com";
-        Console.WriteLine("Header 'To' value changed to: " + headerTo.Body);
-        Console.WriteLine("Modified value of property 'To': " + message.To.ToString());
+        Console.WriteLine($"Modified 'From' property value: {fromAddresses}");
 
-        Header headerFrom = null;
+        // Get 'To' property and 'To' header.
+        MailAddressCollection toAddresses = message.To;
+        Header toHeader = message.MimeEntity.Headers[HeaderId.To];
 
-        // Try to get 'From' header
-        if (!message.MimeEntity.Headers.TryGetHeader("From", out headerFrom))
-            throw new KeyNotFoundException("Header not found.");
+        Console.WriteLine($"Original 'To' header value: {toHeader.Body}");
 
-        Console.WriteLine();
-        Console.WriteLine("Original value of variable 'fromAddresses': " + fromAddresses.ToString());
+        // Change 'To' property value.
+        toAddresses[0].Address = "new.receiver@example.com";
 
-        // Change header value
-        headerFrom.Body = "New sender <new.sender@example.com>";
-        Console.WriteLine("Header 'From' value changed to: " + headerFrom.Body);
-        Console.WriteLine("Modified value of variable 'fromAddresses': " + fromAddresses.ToString());
+        Console.WriteLine($"Modified 'To' header value: {toHeader.Body}");
+    }
+
+    static void Example2()
+    {
+        // If using Professional version, put your serial key below.
+        ComponentInfo.SetLicense("FREE-LIMITED-KEY");
+
+        // Create new message.
+        MailMessage message = new MailMessage("sender@example.com", "receiver@example.com")
+        {
+            Subject = "Example Message",
+            BodyText = "High priority email with comments."
+        };
+
+        // Add message comments.
+        message.MimeEntity.Headers.Add(
+            new Header(HeaderId.Comments, "Example of mail message comment"));
+
+        // Add message priority.
+        message.MimeEntity.Headers.Add(
+            new Header("Importance", "high"));
+        message.MimeEntity.Headers.Add(
+            new Header("Priority", "urgent"));
+        message.MimeEntity.Headers.Add(
+            new Header("X-Priority", "1"));
+
+        message.Save("High Priority Message.eml");
     }
 }

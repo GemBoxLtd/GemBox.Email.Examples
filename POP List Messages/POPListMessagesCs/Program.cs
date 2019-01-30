@@ -5,7 +5,7 @@ using GemBox.Email.Pop;
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
         // If using Professional version, put your serial key below.
         ComponentInfo.SetLicense("FREE-LIMITED-KEY");
@@ -13,18 +13,14 @@ class Program
         using (PopClient pop = new PopClient("<ADDRESS> (e.g. pop.gmail.com)"))
         {
             pop.Connect();
-            Console.WriteLine("Connected.");
-
             pop.Authenticate("<USERNAME>", "<PASSWORD>");
-            Console.WriteLine("Authenticated.");
 
-            // Get info for all available messages
-            IList<PopMessageInfo> infoList = pop.ListMessages();
+            // Get information about all available messages.
+            IList<PopMessageInfo> infos = pop.ListMessages();
 
-            Console.WriteLine("Listing messages...");
-
-            foreach (PopMessageInfo info in infoList)
-                Console.WriteLine("{0} - [{1}] - {2} Byte(s)", info.Number, info.Uid, info.Size);
+            // Display messages information.
+            foreach (PopMessageInfo info in infos)
+                Console.WriteLine($"{info.Number} - [{info.Uid}] - {info.Size} Byte(s)");
         }
     }
 }

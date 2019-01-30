@@ -1,41 +1,24 @@
-using System;
-using GemBox.Email;
+﻿using GemBox.Email;
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
         // If using Professional version, put your serial key below.
         ComponentInfo.SetLicense("FREE-LIMITED-KEY");
 
-        // Create new message
-        MailMessage message = new MailMessage(new MailAddress("sender@example.com", "Sender"),
-                              new MailAddress("first.receiver@example.com", "First receiver"));
+        // Create new message.
+        MailMessage message = new MailMessage(
+            new MailAddress("sender@example.com", "Sender"),
+            new MailAddress("receiver@example.com", "Receiver"));
 
-        // Add second receiver to CC and set subject
-        message.Cc.Add(new MailAddress("carbon.copy@example.com", "Carbon Copy receiver"));
-        message.Subject = "GemBox.Email .NET component save example";
+        // Add subject and body.
+        message.Subject = "Save Example by GemBox.Email";
+        message.BodyText = "Hi 👋,\n" +
+            "This message was created and saved with GemBox.Email.\n" +
+            "Read more about it on https://www.gemboxsoftware.com/email";
 
-        // Add HTML and text body
-        message.BodyHtml = "<html>" +
-                              "<body>" +
-                                 "<p>Hi!<br/><br/>This message was created and saved with " +
-                                    "<b>GemBox.Email .NET component</b>.<br/>" +
-                                    "More info can be found at <a href=\"http://www.gemboxsoftware.com/\">" +
-                                    "GemBox Software website</a>.<br/><br/>" +
-                                    "Regards,<br/>" +
-                                    "GemBox" +
-                                 "</p>" +
-                              "</body>" +
-                           "</html>";
-
-        message.BodyText = "Hi!\r\n" +
-                           "\r\n" +
-                           "This message was created and saved with GemBox.Email .NET component.\r\n" +
-                           "More info can be found at http://www.gemboxsoftware.com/.\r\n\r\n" +
-                           "Regards,\r\n" +
-                           "GemBox";
-
+        // Save message to email file.
         message.Save("Save.eml");
     }
 }

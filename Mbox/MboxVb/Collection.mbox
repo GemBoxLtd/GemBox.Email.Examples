@@ -1,0 +1,36 @@
+From sender@example.com Thu Feb 22 17:39:32 +0000 2018
+Content-Type: text/plain
+Date: Thu, 22 Feb 2018 18:39:32 +0100
+From: sender@example.com
+To: receiver@example.com
+X-Unsent: 1
+Subject: Message collection example
+MIME-Version: 1.0
+
+Hi! This message was created and saved with GemBox.Email.NET component.
+
+From sender2@example.com Thu Feb 22 17:39:32 +0000 2018
+Content-Type: multipart/alternative; boundary="ng,xMz,TNEbk3hi"
+Date: Thu, 22 Feb 2018 18:39:32 +0100
+From: Sender2 <sender2@example.com>
+To: First receiver <first.receiver@example.com>
+X-Unsent: 1
+Cc: Carbon Copy receiver <carbon.copy@example.com>
+Subject: Second message collection example
+MIME-Version: 1.0
+
+--ng,xMz,TNEbk3hi
+Content-Type: text/plain
+Content-Transfer-Encoding: quoted-printable
+
+Hi! This is the second message that was created and saved with GemBox.Email =
+.NET component
+--ng,xMz,TNEbk3hi
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<html><body><p>Hi!<br/><br/>This is the second message that was created and =
+saved with <b>GemBox.Email .NET component</b>.<br/>More info can be found at=
+ <a href=3D"http://www.gemboxsoftware.com/">GemBox Software website</a>.<br/=
+><br/>Regards,<br/>GemBox</p></body></html>
+--ng,xMz,TNEbk3hi--

@@ -5,7 +5,7 @@ using GemBox.Email.Imap;
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
         // If using Professional version, put your serial key below.
         ComponentInfo.SetLicense("FREE-LIMITED-KEY");
@@ -13,19 +13,13 @@ class Program
         using (ImapClient imap = new ImapClient("<ADDRESS> (e.g. imap.gmail.com)"))
         {
             imap.Connect();
-            Console.WriteLine("Connected.");
-
             imap.Authenticate("<USERNAME>", "<PASSWORD>");
-            Console.WriteLine("Authenticated.");
 
-            // For this example we will use INBOX folder
+            // Select INBOX folder.
             imap.SelectInbox();
 
-            // List folder flags for INBOX
+            // List INBOX folder flags.
             IList<ImapFolderInfo> folders = imap.ListFolders();
-
-            Console.WriteLine("Listing '{0}' folder flags...", imap.SelectedFolder.Name);
-
             foreach (string flag in imap.SelectedFolder.Flags)
                 Console.WriteLine(flag);
         }

@@ -5,7 +5,7 @@ using GemBox.Email.Imap;
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
         // If using Professional version, put your serial key below.
         ComponentInfo.SetLicense("FREE-LIMITED-KEY");
@@ -13,36 +13,27 @@ class Program
         using (ImapClient imap = new ImapClient("<ADDRESS> (e.g. imap.gmail.com)"))
         {
             imap.Connect();
-            Console.WriteLine("Connected.");
-
             imap.Authenticate("<USERNAME>", "<PASSWORD>");
-            Console.WriteLine("Authenticated.");
 
-            // List all folders on the server
-            IList<ImapFolderInfo> folders = imap.ListFolders();
-
-            Console.WriteLine("Listing folders...");
-
-            foreach (ImapFolderInfo info in folders)
-                Console.WriteLine(" {0,18}: {1}", info.Name, string.Join(", ", info.Flags));
-
-            // Create new folder and list all folders again
+            // Create new folder.
             imap.CreateFolder("GemBox");
 
-            Console.WriteLine("Listing folders again...");
+            // List all folders on the server and display their information.
+            // Notice the presence of new "GemBox" folder.
+            IList<ImapFolderInfo> folders = imap.ListFolders();
+            foreach (ImapFolderInfo folder in folders)
+                Console.WriteLine($"{folder.Name,-18}: {string.Join(", ", folder.Flags)}");
 
-            folders = imap.ListFolders();
-            foreach (ImapFolderInfo info in folders)
-                Console.WriteLine(" {0,18}: {1}", info.Name, string.Join(", ", info.Flags));
-
-            // Delete newly created folder and repeat listing
+            // Delete newly created folder.
             imap.DeleteFolder("GemBox");
 
-            Console.WriteLine("Final folder listing...");
+            Console.WriteLine(new string('-', 40));
 
+            // Again, list folders and display their information.
+            // Notice the absence of new "GemBox" folder.
             folders = imap.ListFolders();
-            foreach (ImapFolderInfo info in folders)
-                Console.WriteLine(" {0,18}: {1}", info.Name, string.Join(", ", info.Flags));
+            foreach (ImapFolderInfo folder in folders)
+                Console.WriteLine($"{folder.Name,-18}: {string.Join(", ", folder.Flags)}");
         }
     }
 }

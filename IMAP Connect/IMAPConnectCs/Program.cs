@@ -4,21 +4,26 @@ using GemBox.Email.Imap;
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
         // If using Professional version, put your serial key below.
         ComponentInfo.SetLicense("FREE-LIMITED-KEY");
 
-        using (ImapClient imap = new ImapClient("<ADDRESS> (e.g. imap.gmail.com)"))
+        // Create new IMAP client.
+        using (var imap = new ImapClient("<ADDRESS> (e.g. imap.gmail.com)"))
         {
-            // Connect to mail server
+            // By default the connect timeout is 5 sec.
+            imap.ConnectTimeout = TimeSpan.FromSeconds(4);
+
+            // Connect to IMAP server.
             imap.Connect();
             Console.WriteLine("Connected.");
 
-            // Authenticate with specified username and password 
-            // (ImapClient will use strongest possible authentication mechanism)
+            // Authenticate using the credentials; username and password.
             imap.Authenticate("<USERNAME>", "<PASSWORD>");
             Console.WriteLine("Authenticated.");
         }
+
+        Console.WriteLine("Disconnected.");
     }
 }
