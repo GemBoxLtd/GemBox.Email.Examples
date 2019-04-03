@@ -17,23 +17,23 @@ Module Program
 
         ' Incorrectly formatted mail address.
         Dim address As String = " <invalid.address@gemboxsoftware.com"
-        Dim result As MailAddressValidationStatus = MailAddressValidator.Validate(address)
-        Console.WriteLine($"Address: {address,-40} | Result: {result}")
+        Dim result As MailAddressValidationResult = MailAddressValidator.Validate(address)
+        Console.WriteLine($"Address: {address,-40} | Result: {result.Status}")
 
         ' Non-existing mail address account.
         address = "no-address@gemboxsoftware.com"
         result = MailAddressValidator.Validate(address)
-        Console.WriteLine($"Address: {address,-40} | Result: {result}")
+        Console.WriteLine($"Address: {address,-40} | Result: {result.Status}")
 
         ' Non-existing mail address domain.
         address = "no-domain@gemboxsoftware123.com"
         result = MailAddressValidator.Validate(address)
-        Console.WriteLine($"Address: {address,-40} | Result: {result}")
+        Console.WriteLine($"Address: {address,-40} | Result: {result.Status}")
 
         ' Valid mail address.
         address = "Info <info@gemboxsoftware.com>"
         result = MailAddressValidator.Validate(address)
-        Console.WriteLine($"Address: {address,-40} | Result: {result}")
+        Console.WriteLine($"Address: {address,-40} | Result: {result.Status}")
     End Sub
 
     Private Sub Example2()
@@ -49,12 +49,12 @@ Module Program
         }
 
         ' Validate address list and display results.
-        Dim results As IList(Of MailAddressValidationStatus) = MailAddressValidator.Validate(addresses)
+        Dim results As IList(Of MailAddressValidationResult) = MailAddressValidator.Validate(addresses)
 
         Console.WriteLine($"| {"MAIL ADDRESS",-35} | {"RESULT",15} |")
 
         For i = 0 To results.Count - 1
-            Console.WriteLine($"| {addresses(i),-35} | {results(i),15} |")
+            Console.WriteLine($"| {addresses(i),-35} | {results(i).Status,15} |")
         Next
     End Sub
 End Module

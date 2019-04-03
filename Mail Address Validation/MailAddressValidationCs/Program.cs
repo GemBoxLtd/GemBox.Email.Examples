@@ -17,23 +17,23 @@ class Program
 
         // Incorrectly formatted mail address.
         string address = " <invalid.address@gemboxsoftware.com";
-        MailAddressValidationStatus result = MailAddressValidator.Validate(address);
-        Console.WriteLine($"Address: {address,-40} | Result: {result}");
+        MailAddressValidationResult result = MailAddressValidator.Validate(address);
+        Console.WriteLine($"Address: {address,-40} | Result: {result.Status}");
 
         // Non-existing mail address account.
         address = "no-address@gemboxsoftware.com";
         result = MailAddressValidator.Validate(address);
-        Console.WriteLine($"Address: {address,-40} | Result: {result}");
+        Console.WriteLine($"Address: {address,-40} | Result: {result.Status}");
 
         // Non-existing mail address domain.
         address = "no-domain@gemboxsoftware123.com";
         result = MailAddressValidator.Validate(address);
-        Console.WriteLine($"Address: {address,-40} | Result: {result}");
+        Console.WriteLine($"Address: {address,-40} | Result: {result.Status}");
 
         // Valid mail address.
         address = "Info <info@gemboxsoftware.com>";
         result = MailAddressValidator.Validate(address);
-        Console.WriteLine($"Address: {address,-40} | Result: {result}");
+        Console.WriteLine($"Address: {address,-40} | Result: {result.Status}");
     }
 
     static void Example2()
@@ -50,11 +50,11 @@ class Program
         };
 
         // Validate address list and display results.
-        IList<MailAddressValidationStatus> results = MailAddressValidator.Validate(addresses);
+        IList<MailAddressValidationResult> results = MailAddressValidator.Validate(addresses);
 
         Console.WriteLine($"| {"MAIL ADDRESS",-35} | {"RESULT",15} |");
 
         for (int i = 0; i < results.Count; i++)
-            Console.WriteLine($"| {addresses[i],-35} | {results[i],15} |");
+            Console.WriteLine($"| {addresses[i],-35} | {results[i].Status,15} |");
     }
 }
