@@ -1,4 +1,4 @@
-﻿Imports GemBox.Email
+Imports GemBox.Email
 
 Module Program
 

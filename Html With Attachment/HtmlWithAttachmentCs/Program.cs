@@ -1,4 +1,4 @@
-﻿using GemBox.Email;
+using GemBox.Email;
 using GemBox.Email.Smtp;
 
 class Program

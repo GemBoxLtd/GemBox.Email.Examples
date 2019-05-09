@@ -1,11 +1,11 @@
-﻿using Microsoft.AspNetCore;
+using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 
 namespace Gembox.SaveMessage
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static void Main()
         {
             CreateWebHostBuilder(args).Build().Run();
         }

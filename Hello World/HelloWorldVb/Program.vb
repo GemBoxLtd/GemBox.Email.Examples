@@ -1,4 +1,4 @@
-﻿Imports System
+Imports System
 Imports GemBox.Email
 Imports GemBox.Email.Pop
 
