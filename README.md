@@ -1,8 +1,10 @@
 # GemBox.Email
 
-<img src="https://www.gemboxsoftware.com/images/NugetGbe.png" alt="GemBox.Email logo" style="float:left;margin:1rem;" />
+<img src="https://www.gemboxsoftware.com/images/NugetGbe.png" alt="GemBox.Email logo" align="left" />
 
 GemBox.Email is a .NET component that enables developers to read and write email files (MSG, EML, MHTML), and compose, receive and send email messages using IMAP, POP, SMTP and EWS from .NET applications in a simple and efficient way.
+
+<br/>
 
 With GemBox.Email you get a standalone .NET component that doesn't dependent on Microsoft Outlook; that's fast and reliable; that's easy to install, use and deploy.
 
