@@ -4,8 +4,6 @@
 
 GemBox.Email is a .NET component that enables developers to read and write email files (MSG, EML, MHTML), and compose, receive and send email messages using IMAP, POP, SMTP and EWS from .NET applications in a simple and efficient way.
 
-<br/>
-
 With GemBox.Email you get a standalone .NET component that doesn't dependent on Microsoft Outlook; that's fast and reliable; that's easy to install, use and deploy.
 
 This repository contains the source code of GemBox.Email example projects for demos and live examples that are available on [Email Library in C# and VB.NET](https://www.gemboxsoftware.com/email/examples/c-sharp-vb-net-email-library/201) ▶
