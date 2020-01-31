@@ -1,0 +1,47 @@
+﻿@model AspNetCore.Controllers.MessageModel
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Create and Save an Email Message</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <style>
+            label::after { content: ':' }
+            .required::before { content: '*' }
+        </style>
+    </head>
+    <body class="p-md-3">
+        <h3>New email message</h3>
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Sender" class="required"></label>
+                <input asp-for="Sender" class="form-control" value="sender@example.com"/>
+                <span asp-validation-for="Sender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Receiver" class="required"></label>
+                <input asp-for="Receiver" class="form-control" value="receiver@example.com"/>
+                <span asp-validation-for="Receiver" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Subject" class="required"></label>
+                <input asp-for="Subject" class="form-control" value="Example Message"/>
+                <span asp-validation-for="Subject" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BodyText"></label>
+                <textarea asp-for="BodyText" class="form-control"></textarea>
+                <span asp-validation-for="BodyText" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="BodyHtml"></label>
+                <textarea asp-for="BodyHtml" class="form-control"></textarea>
+                <span asp-validation-for="BodyHtml" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default"/>
+            </div>
+        </form>
+    </body>
+</html>

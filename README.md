@@ -20,6 +20,20 @@ This repository contains the source code of GemBox.Email example projects for de
 * [POP3 Client in C# and VB.NET](https://www.gemboxsoftware.com/email/examples/c-sharp-pop3-client/701)
 * [IMAP Client in C# and VB.NET](https://www.gemboxsoftware.com/email/examples/c-sharp-imap-client/301)
 
+## Examples
+
+* Hello World [[C#](https://github.com/gemboxsoftware-dev-team/GemBox.Email.Examples/tree/master/C%23/Hello%20World)][[VB.NET](https://github.com/gemboxsoftware-dev-team/GemBox.Email.Examples/tree/master/VB.NET/Hello%20World)]
+* Common Uses [[C#](https://github.com/gemboxsoftware-dev-team/GemBox.Email.Examples/tree/master/C%23/Common%20Uses)][[VB.NET](https://github.com/gemboxsoftware-dev-team/GemBox.Email.Examples/tree/master/VB.NET/Common%20Uses)]
+* Mail Message [[C#](https://github.com/gemboxsoftware-dev-team/GemBox.Email.Examples/tree/master/C%23/Mail%20Message)][[VB.NET](https://github.com/gemboxsoftware-dev-team/GemBox.Email.Examples/tree/master/VB.NET/Mail%20Message)]
+* POP [[C#](https://github.com/gemboxsoftware-dev-team/GemBox.Email.Examples/tree/master/C%23/POP)][[VB.NET](https://github.com/gemboxsoftware-dev-team/GemBox.Email.Examples/tree/master/VB.NET/POP)]
+* IMAP [[C#](https://github.com/gemboxsoftware-dev-team/GemBox.Email.Examples/tree/master/C%23/IMAP)][[VB.NET](https://github.com/gemboxsoftware-dev-team/GemBox.Email.Examples/tree/master/VB.NET/IMAP)]
+* SMTP [[C#](https://github.com/gemboxsoftware-dev-team/GemBox.Email.Examples/tree/master/C%23/SMTP)][[VB.NET](https://github.com/gemboxsoftware-dev-team/GemBox.Email.Examples/tree/master/VB.NET/SMTP)]
+* Exchange [[C#](https://github.com/gemboxsoftware-dev-team/GemBox.Email.Examples/tree/master/C%23/Exchange)][[VB.NET](https://github.com/gemboxsoftware-dev-team/GemBox.Email.Examples/tree/master/VB.NET/Exchange)]
+* Mail Merge [[C#](https://github.com/gemboxsoftware-dev-team/GemBox.Email.Examples/tree/master/C%23/Mail%20Merge)][[VB.NET](https://github.com/gemboxsoftware-dev-team/GemBox.Email.Examples/tree/master/VB.NET/Mail%20Merge)]
+* Calendar [[C#](https://github.com/gemboxsoftware-dev-team/GemBox.Email.Examples/tree/master/C%23/Calendar)][[VB.NET](https://github.com/gemboxsoftware-dev-team/GemBox.Email.Examples/tree/master/VB.NET/Calendar)]
+* Mail Address Validation [[C#](https://github.com/gemboxsoftware-dev-team/GemBox.Email.Examples/tree/master/C%23/Mail%20Address%20Validation)][[VB.NET](https://github.com/gemboxsoftware-dev-team/GemBox.Email.Examples/tree/master/VB.NET/Mail%20Address%20Validation)]
+* ASP.NET Core [[C#](https://github.com/gemboxsoftware-dev-team/GemBox.Email.Examples/tree/master/C%23/ASP.NET%20Core)]
+
 ## System Requirement
 
 * .NET Framework 3.5 - 4.8
@@ -36,6 +50,7 @@ Install-Package GemBox.Email
 ```
 
 ## Resources
+
 * [Overview](https://www.gemboxsoftware.com/email)
 * [Documentation](https://www.gemboxsoftware.com/email/help/html/Introduction.htm)
 * [Support](https://www.gemboxsoftware.com/email/support)
