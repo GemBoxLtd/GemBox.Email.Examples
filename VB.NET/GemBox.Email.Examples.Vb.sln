@@ -75,7 +75,7 @@ Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "Folders", "Exchange\Folders
 EndProject
 Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "Messages", "Exchange\Messages\Messages.vbproj", "{4A4DC2F6-CB3C-4475-AD50-601E183829B4}"
 EndProject
-Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "Send", "Exchange\Send\Send.vbproj", "{2C03E228-F1EC-4B23-B8CE-6E24FA80C359}"
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "SendMessage", "Exchange\Send Message\SendMessage.vbproj", "{2C03E228-F1EC-4B23-B8CE-6E24FA80C359}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Calendar", "Calendar", "{2D5641C9-F258-4E08-8B56-19EED0154E6B}"
 EndProject
