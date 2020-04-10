@@ -1,10 +1,10 @@
-using Microsoft.AspNetCore.Mvc;
 using System.ComponentModel.DataAnnotations;
 using System.IO;
+using Microsoft.AspNetCore.Mvc;
 using GemBox.Email;
 using GemBox.Email.Mime;
 
-namespace AspNetCore.Controllers
+namespace EmailCore.Controllers
 {
     public class MessageController : Controller
     {

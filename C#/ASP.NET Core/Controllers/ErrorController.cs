@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace AspNetCore.Controllers
+namespace EmailCore.Controllers
 {
     public class ErrorController : Controller
     {

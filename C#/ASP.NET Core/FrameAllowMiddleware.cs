@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 
-namespace AspNetCore
+namespace EmailCore
 {
     public class FrameAllowMiddleware
     {

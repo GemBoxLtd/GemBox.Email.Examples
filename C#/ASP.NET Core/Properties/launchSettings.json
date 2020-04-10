@@ -15,7 +15,7 @@
         "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
-    "Gembox.SaveMessage": {
+    "EmailCore": {
       "commandName": "Project",
       "launchBrowser": true,
       "environmentVariables": {

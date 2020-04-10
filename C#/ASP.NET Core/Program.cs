@@ -1,7 +1,7 @@
 using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 
-namespace AspNetCore
+namespace EmailCore
 {
     public class Program
     {
