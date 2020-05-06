@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFrameworks>net48;netcoreapp2.2</TargetFrameworks>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="GemBox.Email" Version="*" />
+    <PackageReference Include="GemBox.Document" Version="*" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="BodyTemplate.docx">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
