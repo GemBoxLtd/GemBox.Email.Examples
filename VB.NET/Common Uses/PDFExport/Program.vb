@@ -38,7 +38,7 @@ Module Program
               th {{ text-align: left; padding-right: 24px; }}
             </style>
             <table>
-              <tr><th>From:</th><td>{message.From(0).ToString().Replace("< ", " & lt;").Replace(">", "&gt;")}</td></tr>
+              <tr><th>From:</th><td>{message.From(0).ToString().Replace("<", " &lt;").Replace(">", "&gt;")}</td></tr>
               <tr><th>Sent:</th><td>{message.Date:dddd, d MMM yyyy}</td></tr>
               <tr><th>To:</th><td>{message.To(0).ToString().Replace("<", "&lt;").Replace(">", "&gt;")}</td></tr>
               <tr><th>Subject:</th><td>{message.Subject}</td></tr>
