@@ -14,7 +14,7 @@ Module Program
         ' Add subject.
         message.Subject = "Send HTML Email with Image and Attachment"
 
-        ' Add HTML body with CID embeded image.
+        ' Add HTML body with CID embedded image.
         Dim cid As String = "image001@gembox.com"
         message.BodyHtml = "<html><body>" &
             "<p>Hi 👋,</p>" &

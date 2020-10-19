@@ -14,24 +14,45 @@ class Program
         // If using Professional version, put your GemBox.Document serial key below.
         GemBox.Document.ComponentInfo.SetLicense("FREE-LIMITED-KEY");
 
-        // Load email file.
-        MailMessage message = MailMessage.Load("Attachment.eml");
+        Example1();
+        Example2();
+    }
 
-        // Create new document.
+    static void Example1()
+    {
+        // Load an email file.
+        MailMessage message = MailMessage.Load("Html.eml");
+
+        // Create a new document.
         DocumentModel document = new DocumentModel();
 
-        // Import email's content to document.
+        // Import the email's body to the document.
+        LoadBody(message, document);
+
+        // Save the document as PDF.
+        document.Save("Export1.pdf");
+    }
+
+    static void Example2()
+    {
+        // Load an email file.
+        MailMessage message = MailMessage.Load("Attachment.eml");
+
+        // Create a new document.
+        DocumentModel document = new DocumentModel();
+
+        // Import the email's content to the document.
         LoadHeaders(message, document);
         LoadBody(message, document);
         LoadAttachments(message.Attachments, document);
 
-        // Save document as PDF.
-        document.Save("Export.pdf");
+        // Save the document as PDF.
+        document.Save("Export2.pdf");
     }
 
     static void LoadHeaders(MailMessage message, DocumentModel document)
     {
-        // Create HTML content from headers.
+        // Create HTML content from the email headers.
         var htmlHeaders = $@"
             <style>
               * {{ font-size: 12px; font-family: Calibri; }}
@@ -45,27 +66,25 @@ class Program
             </table>
             <hr>";
 
-        // Load HTML headers to document.
+        // Load the HTML headers to the document.
         document.Content.End.LoadText(htmlHeaders, LoadOptions.HtmlDefault);
     }
 
     static void LoadBody(MailMessage message, DocumentModel document)
     {
         if (!string.IsNullOrEmpty(message.BodyHtml))
-        {
-            // Replace attached CID images to inlined DATA urls.
-            var htmlBody = ReplaceEmbeddedImages(message.BodyHtml, message.Attachments);
-
-            // Load HTML body to document.
-            document.Content.End.LoadText(htmlBody, LoadOptions.HtmlDefault);
-        }
+            // Load the HTML body to the document.
+            document.Content.End.LoadText(
+                ReplaceEmbeddedImages(message.BodyHtml, message.Attachments),
+                LoadOptions.HtmlDefault);
         else
-        {
-            // Load TXT body to document.
-            document.Content.End.LoadText(message.BodyText, LoadOptions.TxtDefault);
-        }
+            // Load the TXT body to the document.
+            document.Content.End.LoadText(
+                message.BodyText,
+                LoadOptions.TxtDefault);
     }
 
+    // Replace attached CID images to inlined DATA urls.
     static string ReplaceEmbeddedImages(string htmlBody, AttachmentCollection attachments)
     {
         var srcPattern =
@@ -73,7 +92,7 @@ class Program
             "(.+?)" +
             "(?=[\"'].*?>)";
 
-        // Iterate through "src" attributes from HTML images in reverse order.
+        // Iterate through the "src" attributes from HTML images in reverse order.
         foreach (var match in Regex.Matches(htmlBody, srcPattern, RegexOptions.IgnoreCase).Cast<Match>().Reverse())
         {
             var imageId = match.Value.Replace("cid:", "");
@@ -86,7 +105,7 @@ class Program
                 var embeddedImage = entity.Charset.GetString(entity.Content);
                 var embeddedSrc = $"data:{entity.ContentType};{entity.TransferEncoding},{embeddedImage}";
 
-                // Replace "src" attribute with inlined image.
+                // Replace the "src" attribute with the inlined image.
                 htmlBody = $"{htmlBody.Substring(0, match.Index)}{embeddedSrc}{htmlBody.Substring(match.Index + match.Length)}";
             }
         }

@@ -13,25 +13,44 @@ Module Program
         ' If using Professional version, put your GemBox.Document serial key below.
         GemBox.Document.ComponentInfo.SetLicense("FREE-LIMITED-KEY")
 
-        ' Load email file.
-        Dim message As MailMessage = MailMessage.Load("Attachment.eml")
+        Example1()
+        Example2()
 
-        ' Create new document.
+    End Sub
+
+    Sub Example1()
+        ' Load an email file.
+        Dim message As MailMessage = MailMessage.Load("Html.eml")
+
+        ' Create a new document.
         Dim document As DocumentModel = New DocumentModel()
 
-        ' Import email's content to document.
+        ' Import the email's body to the document.
+        LoadBody(message, document)
+
+        ' Save the document as PDF.
+        document.Save("Export1.pdf")
+    End Sub
+
+    Sub Example2()
+        ' Load an email file.
+        Dim message As MailMessage = MailMessage.Load("Attachment.eml")
+
+        ' Create a new document.
+        Dim document As DocumentModel = New DocumentModel()
+
+        ' Import the email's content to the document.
         LoadHeaders(message, document)
         LoadBody(message, document)
         LoadAttachments(message.Attachments, document)
 
-        ' Save document as PDF.
-        document.Save("Export.pdf")
-
+        ' Save the document as PDF.
+        document.Save("Export2.pdf")
     End Sub
 
     Sub LoadHeaders(message As MailMessage, document As DocumentModel)
 
-        ' Create HTML content from headers.
+        ' Create HTML content from the email headers.
         Dim htmlHeaders = $"
             <style>
               * {{ font-size: 12px; font-family: Calibri; }}
@@ -45,7 +64,7 @@ Module Program
             </table>
             <hr>"
 
-        ' Load HTML headers to document.
+        ' Load the HTML headers to the document.
         document.Content.End.LoadText(htmlHeaders, LoadOptions.HtmlDefault)
 
     End Sub
@@ -53,18 +72,20 @@ Module Program
     Sub LoadBody(message As MailMessage, document As DocumentModel)
 
         If Not String.IsNullOrEmpty(message.BodyHtml) Then
-            ' Replace attached CID images to inlined DATA urls.
-            Dim htmlBody = ReplaceEmbeddedImages(message.BodyHtml, message.Attachments)
-
-            ' Load HTML body to document.
-            document.Content.End.LoadText(htmlBody, LoadOptions.HtmlDefault)
+            ' Load the HTML body to the document.
+            document.Content.End.LoadText(
+                ReplaceEmbeddedImages(message.BodyHtml, message.Attachments),
+                LoadOptions.HtmlDefault)
         Else
-            ' Load TXT body to document.
-            document.Content.End.LoadText(message.BodyText, LoadOptions.TxtDefault)
+            ' Load the TXT body to the document.
+            document.Content.End.LoadText(
+                message.BodyText,
+                LoadOptions.TxtDefault)
         End If
 
     End Sub
 
+    ' Replace attached CID images to inlined DATA urls.
     Function ReplaceEmbeddedImages(htmlBody As String, attachments As AttachmentCollection) As String
 
         Dim srcPattern =
@@ -72,7 +93,7 @@ Module Program
             "(.+?)" &
             "(?=[""'].*?>)"
 
-        ' Iterate through "src" attributes from HTML images in reverse order.
+        ' Iterate through the "src" attributes from HTML images in reverse order.
         For Each match In Regex.Matches(htmlBody, srcPattern, RegexOptions.IgnoreCase).Cast(Of Match)().Reverse()
             Dim imageId = match.Value.Replace("cid:", "")
             Dim attachment As Attachment = attachments.FirstOrDefault(Function(a) a.ContentId = imageId)
@@ -83,7 +104,7 @@ Module Program
                 Dim embeddedImage = entity.Charset.GetString(entity.Content)
                 Dim embeddedSrc = $"data:{entity.ContentType};{entity.TransferEncoding},{embeddedImage}"
 
-                ' Replace "src" attribute with inlined image.
+                ' Replace the "src" attribute with the inlined image.
                 htmlBody = $"{htmlBody.Substring(0, match.Index)}{embeddedSrc}{htmlBody.Substring(match.Index + match.Length)}"
             End If
         Next

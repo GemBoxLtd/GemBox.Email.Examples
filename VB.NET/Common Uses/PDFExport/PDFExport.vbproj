@@ -12,6 +12,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Include="Html.eml">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="Attachment.eml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>

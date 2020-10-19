@@ -8,13 +8,13 @@ class Program
 {
     static void Main()
     {
-        // If using Professional version, put your GemBox.Email serial key below.
+        // If using the Professional version, put your GemBox.Email serial key below.
         GemBox.Email.ComponentInfo.SetLicense("FREE-LIMITED-KEY");
 
-        // If using Professional version, put your GemBox.Document serial key below.
+        // If using the Professional version, put your GemBox.Document serial key below.
         GemBox.Document.ComponentInfo.SetLicense("FREE-LIMITED-KEY");
 
-        // Load Word file.
+        // Load a Word file.
         var document = DocumentModel.Load("BodyTemplate.docx");
 
         using (var stream = new MemoryStream())
@@ -26,7 +26,7 @@ class Program
                 UseContentIdHeaders = true
             });
 
-            // Load MHTML content as mail message.
+            // Load MHTML content as a mail message.
             var message = MailMessage.Load(stream, MailMessageFormat.Mhtml);
 
             message.Subject = "Word message example";
@@ -35,7 +35,7 @@ class Program
             message.From.Add(new MailAddress("sender@example.com"));
             message.To.Add(new MailAddress("receiver@example.com"));
 
-            // Send email.
+            // Send the email.
             using (var smtp = new SmtpClient("<HOST>"))
             {
                 smtp.Connect();

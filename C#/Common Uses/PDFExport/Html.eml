@@ -1,0 +1,98 @@
+To: Receiver <receiver@example.com>
+Cc: carbon.copy@example.com
+From: Sender <sender@example.com>
+Subject: Html message example
+Date: Fri, 2 Dec 2016 09:02:45 +0100
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="------------FC5125F88A8A3CB9D52174FD"
+
+--------------FC5125F88A8A3CB9D52174FD
+Content-Type: text/plain; charset=utf-8; format=flowed
+Content-Transfer-Encoding: 7bit
+
+Hi!
+
+This message was created with *GemBox.Email .NET component*.
+More info can be found at: https://www.gemboxsoftware.com/
+
+Regards,
+GemBox (r)
+
+
+
+--------------FC5125F88A8A3CB9D52174FD
+Content-Type: multipart/related;
+ boundary="------------3DF2D7CF298BE73EE2AB6DD9"
+
+--------------3DF2D7CF298BE73EE2AB6DD9
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<html>=0A  <head>=0A    <meta http-equiv=3D"content-type" content=3D"text/ht=
+ml; charset=3Dutf-8">=0A    <title>Html message example</title>=0A  </head>=0A=
+  <body bgcolor=3D"#FFFFFF" text=3D"#000000">=0A    <p>Hi!</p>=0A    <p>This=
+ message was created with <b>GemBox.Email</b>, a .NET component for email pr=
+ocessing.<br>=0A      More info can be found at: <a=0A        href=3D"https:=
+//www.gemboxsoftware.com/">https://www.gemboxsoftware.com/</a></p>=0A    <p>=
+Regards,</p>=0A    <p><img src=3D"cid:image1@gemboxsoftware.com" alt=3D""></=
+p>=0A  </body>=0A</html>=0A=0A
+--------------3DF2D7CF298BE73EE2AB6DD9
+Content-Type: image/png
+Content-Transfer-Encoding: base64
+Content-Disposition: inline;
+ filename="logo.png"
+Content-ID: <image1@gemboxsoftware.com>
+
+iVBORw0KGgoAAAANSUhEUgAAAMgAAAA2CAMAAAC1HibFAAAC8VBMVEUAAAAGAwb///8XFRpBtd0A
+bLQfGiAFBAYaGRogGyEAAAAVABUhHCIeGh8aERoFBQUhHSIZFRkRDxIiHCMfGiAgGyL///8fGiAe
+Gh8gGyAKBwz///8hHCL///8ODg7///8hHCL///8eGiD///8cGB0ZFhoXFBgEAwUEMk8hHCL///8f
+GiAdGR4ZFRkZFhocGRwWFhb///8KCg8ODg4TExP///8gHCEeGR8aFxsgGyD///////8PDRAAAAD/
+//////8hHCL09vgfGCD8/v////8fGh8aFhsZFRkdGB8cGB0QDhD////////+/v8gGyEAN1sfGyEe
+GR8eGiAeGh////8HSXRzmcnj6/T////c5OjAy9KSpbL///8eGR7///////8WExb///8YFBj/////
+//////8vYq50yej3+vwUPVid2O6duNm74vL9/f43WnI5bZEgGyHh6O1jjam9z9kfGR////8dGR4z
+tuJVweRPv+NJd7hXgr3z+PwcWIHG6PXo9fzH1+mit8f///////9ifpBtjqOTsML///+rvsr///8O
+Cw4fGx////8zuOIrteAkWKk9jcGQrdIOOlWEzusAbLSS1OyMrNMZWIEUU3u8z+Tl9Pu1yeLE2ugp
+T2c7cJFVc4fW3eKKqb1Kcor///////8iHSMAq90AOZkAVakAjswAVYwAcrsARHAALUoVS6D7/f0A
+c7zX4ecAqNwApNkCPZwAPJgAn9YAk88AhscAS6MCV5IEVIcAfMEAd74AVKgAQpUASpHv8/br8PMY
+sd+YvNQAmtMAkM0Ai8uYs8UAgcQDbrMAUaYAVaQAQ58AVZpFeJkAUYwGrN4Al9KTrb1Jj7sAcbgp
+fbR3m7MRcrFnkKwTSqJ3j54AT48oZo0xaIwSWYhWdIcWVHwER3MzV24cRF7l7vLI3OnE0965z961
+xdCzwMmRpLFVgqAYTqAAVZ4ATYAASnrR3eUIrd1so8VmoMVgm8EAZqcNRJ4AX50VS3AAQGiOaK2l
+AAAApHRSTlMADdR4/PDOICfaAgTrkhgI+Egr/LfjqsWxJRT672YQ+PXqyoh9XFgk/vLkwKFhUz8a
+EgsHBfTepXFuTURBHAP859cf78SrhWlFNjIrDN7TwbWYindu+PTlzMbBwbOdkFtLPzktJAf+9O3t
+7Ovq6NnY1svLwrqig/36+vr56ejn5uXizs3HxsHAvn48OSD+/v729PPv7u3s6+nm5eTf393Hwb26
+GON2JdcAAActSURBVGje1Zpl2NJQGIbPREFKPkFFsQsssMXu7u7u7u7u7s4Nu7u7u7u7O3/5vmfM
+TQZM/eN4ru+SnTMO273dZ6/XNqKUzFVHpKvboCyJ7OTP0y07i8keLw+J3DSpnxwYCtVZPLIcfJYb
+NZZEYjInLgp73652+9WrK6xa1aFLEZYtUDRxpCmWP0+8hCybtNOwNKtXIwik2rBOBSJNsTIpeaVa
+AYQAguk3vBD0p0vZlERCMiceIigFEUFoQDFkrKl6xZrlpkrVGopKyUGoYp1rgWJJ4+XOT1QbUSlp
+0twbdPYBDxERii2pOlhUSszDlweg+/HFOxRBVKw2VaxqZqKuyJWieXRzPStk/dX7qwIUS6g2xUIp
+9WItK83a569+V2zmIqpY/SZEFWkQDfdm5Dy5UvLsPxag2HwslGzRRuT/JzFUuYUL5EoFJIxinRKy
+BVRAUo4dNFmuVLisfRag2Iy5bF3y38Oyr8+tSiMqdXE/GxAFxd5+2x2djUb+e1h2zeYVK97+SBNc
+KQXF3u04sXL3RrWALN27AvLu+3P2r7L20I4vK1euXLfFFwIkScnUzowM+asYE/iTyfgPIECC2Xn7
+2N9gXLm8EjkO+4KDeOw2DhJldxrInycBJyRZes/fgyzdBxyU5ez7P8J4cukEQCDHBV9QkFjpuV8p
+byV/nJicJJX+HgRIhNy9rjTdD3y8tlLIVl9QkMJxOUhce/oc+Fnv70D0Wq22vImDNPx7EJGEKqak
+lJCjvqAg2bR4IlK78uXTxY5v0+uE7sJJyG9xFPZrZyycSQRJnQ/GuVLBkpf4k4n5QxDILZEEFXsa
+Wikx23zBQarATnR1WejOxyqRl/YxqfQwaQrWK4wNO8dVtphNMIW8QFAqDq6pIoDE5r8PJzM+gWTN
+qY3iuETFMsJyHI5LWxjNTQTihQDZfI4iSBQ7EEDx+BMoJc3xDSFACoJWLqGRJRuBWPUcn0RjoKWF
+/dDy7RyxSibjl8y/gRhNAIs9HTk+NjMgp+W4ONAZH8B1cpAAElGxi2vlSonZBRxBQUrBZrsHXIrh
++EbFN3tNgJiFgqSFDhud0jCfKIrNKoJktRbjOJOODoQh6VNE0d80alA94oR/SxjkIIEkcsWegVIB
+gULoCwFSArZTmvwWM+xW7FhJHKXhxOQEENw7t9WaKgoJiuV15bXDZ3EEEZMir4EOtBWHyTZaCws6
+wsD3TDHhcFTMQkKCQDmRBxRb/xmUCs0hB8F5+ms7jly5PNQTDSpmcHNcegpiawhziMmAOxzLSIwx
+EwGQFAROYGmYYtDtTYKmlU5LVcMP+DNZg032sCQ73kzdtkvOAQU9JEhO2I3CEs/sRIdi5MIAZEEK
+Ys9KICiJmyChHeznQeLq9focJqyJsUmCX3PG0JUeApALk9MQDkROsuPMqWXLYixffvT4ugCOw77Q
+ILGFvcM0hkNOSnKSJKMgGQgmI7T5gxv/F0hqHcTljAtIWfGnYv2ysyN8MFiicjAkPAiUE0mAAgIg
+mG27pCxbfWFAmLRQRYxSkFK4cb0/5SmI+RdIrAAQ/gxY3LA4BgfGJDRe+CF+AiKsAgiQiErtAQgR
+BE6LqNhyXzgQguabpSAOG8wRnZA/AqFn0Y0Dc/FtPZ1ECZLBFRz+YimBQGEUlIKIIDSg2G6+EIYH
+caHhxei2mMoIYkgPnmSi7SpG8kcgTHpcxIGmBMIVxEOnUty8eNVSBNl8S1BKBiIodtynAGJwRuFl
+p6LZXBEsQyMaQocpVcmSqQpyXoMCSNcMkDiJYKkgQ2JjVa/scceBpt2C/2ewOY1VUC4FECA5KTLI
+QSBbNyiBEEtqk2Rya6CjuE1oahkFEHGgEyqjJkpo6q3ECo0MFqgmKFd4EMimPWFBgEMRhFhKe0Fm
+jKneaAZLu7sjbSaq5DL8GUhUnNgWVMyTgjbTZrAajFrAQUMbJwO5FEGAJAzIEeBQBiEGh7WE2Vuv
+uMflMPJouoY5i6dKbXVgI7VGk5f2ZtJoNHzt9Gg0HuDV+FPCac2UjWCy5ssLA904MFNO/zijU6PJ
+mUUBBHI6NMiRjT4lECFZHA5HkqxiOxuThLH4VzEMv8LAMAzhQRlYSds0WSQDjcJAI6zIJnybMSiC
+AElIEOCQRSU3H14vDZLtIUC2+NQKUo6d9FWBJIYCx8G2arhBh7dM5/QOSyKCHJZTnO/ZPyGbUAW3
+TPmb2H2nT5CRnJSBXJBhjGutmpvYvx4r1Kh+I7AwBoBsDVSqxWw1PVaQPOiZ1XtTsHISI1ghPN+r
+reoe9Pif5uKjt5ZtmstJYsgL4fhpRVT56C2UYqdFECiEolIDVPwwVKrYwD6bpCQUZKOolOofT4sv
+DIiKbUcQsYD0aF0kIl4YCKLYdgqyJUKUkr9UIyq2HUCgEH7o2T/iXqoRX3Oiip2McQGUiszXnMQX
+z1CxiVP6RvCLZwGvAnaLOKUi9eXMn8NRxa/VcTuwAAAAAElFTkSuQmCC
+--------------3DF2D7CF298BE73EE2AB6DD9--
+--------------FC5125F88A8A3CB9D52174FD--

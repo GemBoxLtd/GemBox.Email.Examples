@@ -7,13 +7,13 @@ Imports GemBox.Email.Smtp
 Module Program
     Sub Main()
 
-        ' If using Professional version, put your GemBox.Email serial key below.
+        ' If using the Professional version, put your GemBox.Email serial key below.
         GemBox.Email.ComponentInfo.SetLicense("FREE-LIMITED-KEY")
 
-        ' If using Professional version, put your GemBox.Document serial key below.
+        ' If using the Professional version, put your GemBox.Document serial key below.
         GemBox.Document.ComponentInfo.SetLicense("FREE-LIMITED-KEY")
 
-        ' Load Word file.
+        ' Load a Word file.
         Dim document = DocumentModel.Load("BodyTemplate.docx")
 
         Using stream As New MemoryStream()
@@ -24,7 +24,7 @@ Module Program
                 .UseContentIdHeaders = True
             })
 
-            ' Load MHTML content as mail message.
+            ' Load MHTML content as a mail message.
             Dim message = MailMessage.Load(stream, MailMessageFormat.Mhtml)
 
             message.Subject = "Word message example"
@@ -33,7 +33,7 @@ Module Program
             message.From.Add(New MailAddress("sender@example.com"))
             message.To.Add(New MailAddress("receiver@example.com"))
 
-            ' Send email.
+            ' Send the email.
             Using smtp As New SmtpClient("<HOST>")
                 smtp.Connect()
                 smtp.Authenticate("<USERNAME>", "<PASSWORD>")
