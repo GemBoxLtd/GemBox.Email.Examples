@@ -41,7 +41,7 @@ This repository contains the source code of GemBox.Email example projects for de
 ## System Requirement
 
 * .NET Framework 3.5 - 4.8
-* Or platforms that implement .NET Standard 2.0 or higher.
+* .NET Standard 2.0 (.NET 5)
 
 ## Installation
 
