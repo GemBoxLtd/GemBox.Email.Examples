@@ -14,7 +14,7 @@ Module Program
 
         ' Create new event.
         Dim ev As New [Event]()
-        ev.Organizer = New MailAddress("info@gemboxsoftware.com", "GemBox d.o.o.")
+        ev.Organizer = New MailAddress("info@gemboxsoftware.com", "GemBox Ltd.")
         ev.Name = "GemBox Meeting Request"
         ev.Location = "152 City Road, London"
         ev.Start = New DateTime(2018, 1, 10, 9, 0, 0, DateTimeKind.Utc)
@@ -35,7 +35,7 @@ Module Program
 
         ' Create new task.
         Dim task As New Task()
-        task.Organizer = New MailAddress("info@gemboxsoftware.com", "GemBox d.o.o.")
+        task.Organizer = New MailAddress("info@gemboxsoftware.com", "GemBox Ltd.")
         task.Name = "Implement iCalendar Support"
         task.Start = New DateTime(2018, 1, 1, 0, 0, 0, DateTimeKind.Utc)
         task.Deadline = New DateTime(2018, 1, 15, 0, 0, 0, DateTimeKind.Utc)

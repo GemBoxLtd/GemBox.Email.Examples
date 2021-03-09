@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFrameworks>net48;netcoreapp2.2</TargetFrameworks>
+    <TargetFrameworks>net48;netcoreapp3.1</TargetFrameworks>
   </PropertyGroup>
 
   <ItemGroup>
@@ -11,7 +11,7 @@
 
   <ItemGroup>
     <None Include="Attachment.eml">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
   </ItemGroup>
 

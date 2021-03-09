@@ -14,7 +14,7 @@ class Program
 
         // Create new event.
         Event ev = new Event();
-        ev.Organizer = new MailAddress("info@gemboxsoftware.com", "GemBox d.o.o.");
+        ev.Organizer = new MailAddress("info@gemboxsoftware.com", "GemBox Ltd.");
         ev.Name = "GemBox Meeting Request";
         ev.Location = "152 City Road, London";
         ev.Start = new DateTime(2018, 1, 10, 9, 0, 0, DateTimeKind.Utc);
@@ -35,7 +35,7 @@ class Program
 
         // Create new task.
         Task task = new Task();
-        task.Organizer = new MailAddress("info@gemboxsoftware.com", "GemBox d.o.o.");
+        task.Organizer = new MailAddress("info@gemboxsoftware.com", "GemBox Ltd.");
         task.Name = "Implement iCalendar Support";
         task.Start = new DateTime(2018, 1, 1, 0, 0, 0, DateTimeKind.Utc);
         task.Deadline = new DateTime(2018, 1, 15, 0, 0, 0, DateTimeKind.Utc);
