@@ -47,17 +47,15 @@ This repository contains the source code of GemBox.Email example projects for de
 
 ## Installation
 
-You can download GemBox.Email from [BugFixes](https://www.gemboxsoftware.com/email/downloads/bugfixes.html) 🛠️
+You can download GemBox.Email from [BugFixes 🛠️](https://www.gemboxsoftware.com/email/downloads/bugfixes.html) or from [NuGet 📦](https://www.nuget.org/packages/GemBox.Email/).
 
-Or from [NuGet](https://www.nuget.org/packages/GemBox.Email/) 📦
+## Support
 
-## Resources
-
-* [Overview](https://www.gemboxsoftware.com/email)
-* [Documentation](https://www.gemboxsoftware.com/email/docs/introduction.html)
-* [Support](https://www.gemboxsoftware.com/email/support)
+* [Contact Us](https://support.gemboxsoftware.com/new-ticket?ticket%5Bdepartment%5D=1&ticket%5Bproduct%5D=3)
+* [Forum](https://forum.gemboxsoftware.com/c/gembox-email/9)
 * [Blog](https://www.gemboxsoftware.com/gembox-email)
+* [API Reference](https://www.gemboxsoftware.com/email/docs/introduction.html)
 
 ## License
 
-You can download GemBox.Email's license agreement from [EULA.rtf](https://www.gemboxsoftware.com/EULA.rtf) 📝
+You can download GemBox.Email's license agreement from [EULA.rtf 📝](https://www.gemboxsoftware.com/EULA.rtf).
