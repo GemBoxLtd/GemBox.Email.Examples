@@ -1,5 +1,7 @@
 # GemBox.Email
 
+[![NuGet version](https://img.shields.io/nuget/v/GemBox.Email?style=for-the-badge)](https://www.nuget.org/packages/GemBox.Email/) [![NuGet downloads](https://img.shields.io/nuget/dt/GemBox.Email?style=for-the-badge)](https://www.nuget.org/packages/GemBox.Email/) [![Visual Studio Marketplace rating](https://img.shields.io/visual-studio-marketplace/stars/GemBoxSoftware.GemBoxEmail?style=for-the-badge)](https://marketplace.visualstudio.com/items?itemName=GemBoxSoftware.GemBoxEmail)
+
 <img src="https://www.gemboxsoftware.com/images/NugetGbe.png" alt="GemBox.Email logo" align="left" />
 
 GemBox.Email is a .NET component that enables developers to read and write email files (MSG, EML, MHTML), and compose, receive and send email messages using IMAP, POP, SMTP and EWS from .NET applications in a simple and efficient way.
