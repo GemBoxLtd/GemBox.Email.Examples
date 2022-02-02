@@ -24,10 +24,10 @@ class Program
             "</body></html>";
 
         // Add image as inline attachment.
-        message.Attachments.Add(new Attachment("gembox-email-logo.png") { ContentId = cid });
+        message.Attachments.Add(new Attachment("GemBoxEmailLogo.png") { ContentId = cid });
 
         // Add file as attachment.
-        message.Attachments.Add(new Attachment("sample-file.pdf"));
+        message.Attachments.Add(new Attachment("GemBoxSampleFile.pdf"));
 
         // Create new SMTP client and send an email message.
         using (SmtpClient smtp = new SmtpClient("<ADDRESS> (e.g. smtp.gmail.com)"))

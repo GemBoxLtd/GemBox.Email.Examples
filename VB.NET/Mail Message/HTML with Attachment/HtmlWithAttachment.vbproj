@@ -10,10 +10,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="sample-file.pdf">
+    <None Include="GemBoxSampleFile.pdf">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
-    <Content Include="gembox-email-logo.png">
+    <Content Include="GemBoxEmailLogo.png">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

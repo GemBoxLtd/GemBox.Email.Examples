@@ -24,10 +24,10 @@ Module Program
             "</body></html>"
 
         ' Add image as inline attachment.
-        message.Attachments.Add(New Attachment("gembox-email-logo.png") With {.ContentId = cid})
+        message.Attachments.Add(New Attachment("GemBoxEmailLogo.png") With {.ContentId = cid})
 
         ' Add file as attachment.
-        message.Attachments.Add(New Attachment("sample-file.pdf"))
+        message.Attachments.Add(New Attachment("GemBoxSampleFile.pdf"))
 
         ' Create new SMTP client and send an email message.
         Using smtp As New SmtpClient("<ADDRESS> (e.g. smtp.gmail.com)")
