@@ -7,6 +7,14 @@
 
   <ItemGroup>
     <PackageReference Include="GemBox.Email" Version="*" />
+    <Reference Include="System.IO.Compression" Condition=" '$(TargetFramework)' == 'net48' " />
+    <PackageReference Include="System.IO.Compression" Version="*" Condition=" '$(TargetFramework)' == 'netcoreapp3.1' " />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Attachment.eml">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

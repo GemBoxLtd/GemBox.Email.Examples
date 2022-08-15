@@ -95,11 +95,11 @@ Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "DataTableSource", "Mail Mer
 EndProject
 Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "ObjectSource", "Mail Merge\Object Source\ObjectSource.vbproj", "{E3B17707-98D3-4EFB-B8F7-DC16189014DC}"
 EndProject
-Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "PDFExport", "Common Uses\PDFExport\PDFExport.vbproj", "{9D627334-FA73-40DD-8DD5-ED84BF16A675}"
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "PDFExport", "Common Uses\PDF Export\PDFExport.vbproj", "{9D627334-FA73-40DD-8DD5-ED84BF16A675}"
 EndProject
-Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "WordImport", "Common Uses\WordImport\WordImport.vbproj", "{54255FE0-FD41-457C-95BB-E597291DC68C}"
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "WordImport", "Common Uses\Word Import\WordImport.vbproj", "{54255FE0-FD41-457C-95BB-E597291DC68C}"
 EndProject
-Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "OAuth", "Common Uses\OAuth\OAuth.vbproj", "{33AC88C0-A762-47A9-B95B-9A6ADB64D9F9}"
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "OAuth", "Common Uses\OAuth 2.0\OAuth.vbproj", "{33AC88C0-A762-47A9-B95B-9A6ADB64D9F9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -97,15 +97,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MailAddressValidation", "Ma
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Platforms", "Platforms", "{3B20C1AD-705C-4AE9-85FC-2770D0459395}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PDFExport", "Common Uses\PDFExport\PDFExport.csproj", "{5DC69257-6F08-4A97-8D5A-95C69DBE267A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PDFExport", "Common Uses\PDF Export\PDFExport.csproj", "{5DC69257-6F08-4A97-8D5A-95C69DBE267A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WordImport", "Common Uses\WordImport\WordImport.csproj", "{F403849F-A4A0-4E98-93BA-A60F646ADED2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WordImport", "Common Uses\Word Import\WordImport.csproj", "{F403849F-A4A0-4E98-93BA-A60F646ADED2}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OAuth", "Common Uses\OAuth\OAuth.csproj", "{F8D5CB61-9D3A-4966-A895-A09E9D2BB2F3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OAuth", "Common Uses\OAuth 2.0\OAuth.csproj", "{F8D5CB61-9D3A-4966-A895-A09E9D2BB2F3}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreMvc", "Platforms\ASP.NET Core MVC\AspNetCoreMvc.csproj", "{D676FBA5-B459-4E87-8182-5C60A2AA66BD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreMvc", "Platforms\ASP.NET Core\MVC\AspNetCoreMvc.csproj", "{D676FBA5-B459-4E87-8182-5C60A2AA66BD}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreRazorPages", "Platforms\ASP.NET Core Razor Pages\AspNetCoreRazorPages.csproj", "{B45CBCA5-B5AA-4B01-BAFE-D9114B121E8A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreRazorPages", "Platforms\ASP.NET Core\Razor Pages\AspNetCoreRazorPages.csproj", "{B45CBCA5-B5AA-4B01-BAFE-D9114B121E8A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
