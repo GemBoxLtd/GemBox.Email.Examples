@@ -37,8 +37,9 @@ This repository contains the source code of GemBox.Email example projects for de
 | Exchange | [C#](https://github.com/GemBoxLtd/GemBox.Email.Examples/tree/master/C%23/Exchange), [VB.NET](https://github.com/GemBoxLtd/GemBox.Email.Examples/tree/master/VB.NET/Exchange) |
 | Mail Merge | [C#](https://github.com/GemBoxLtd/GemBox.Email.Examples/tree/master/C%23/Mail%20Merge), [VB.NET](https://github.com/GemBoxLtd/GemBox.Email.Examples/tree/master/VB.NET/Mail%20Merge) |
 | Calendar | [C#](https://github.com/GemBoxLtd/GemBox.Email.Examples/tree/master/C%23/Calendar), [VB.NET](https://github.com/GemBoxLtd/GemBox.Email.Examples/tree/master/VB.NET/Calendar) |
-| Mail Address Validation | [C#](https://github.com/GemBoxLtd/GemBox.Email.Examples/tree/master/C%23/Mail%20Address%20Validation), [VB.NET](https://github.com/GemBoxLtd/GemBox.Email.Examples/tree/master/VB.NET/Mail%20Address%20Validation) |
+| Signed Messages | [C#](https://github.com/GemBoxLtd/GemBox.Email.Examples/tree/master/C%23/Signed%20Messages), [VB.NET](https://github.com/GemBoxLtd/GemBox.Email.Examples/tree/master/VB.NET/Signed%20Messages) |
 | Platforms | [C#](https://github.com/GemBoxLtd/GemBox.Email.Examples/tree/master/C%23/Platforms) |
+| Mail Address Validation | [C#](https://github.com/GemBoxLtd/GemBox.Email.Examples/tree/master/C%23/Mail%20Address%20Validation), [VB.NET](https://github.com/GemBoxLtd/GemBox.Email.Examples/tree/master/VB.NET/Mail%20Address%20Validation) |
 
 ## System Requirement
 

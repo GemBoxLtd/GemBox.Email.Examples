@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29709.97
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32804.467
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hello World", "Hello World", "{F9D84BFA-B844-4B3A-B0CA-E5543CEE611A}"
 EndProject
@@ -106,6 +106,12 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreMvc", "Platforms\ASP.NET Core\MVC\AspNetCoreMvc.csproj", "{D676FBA5-B459-4E87-8182-5C60A2AA66BD}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AspNetCoreRazorPages", "Platforms\ASP.NET Core\Razor Pages\AspNetCoreRazorPages.csproj", "{B45CBCA5-B5AA-4B01-BAFE-D9114B121E8A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Signed Messages", "Signed Messages", "{0C492C83-05B0-4905-9C6D-97FB705B112B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignAndUnsign", "Signed Messages\Sign and Unsign\SignAndUnsign.csproj", "{B5394EEA-E8FE-4F16-BB17-37974C133684}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValidateSignature", "Signed Messages\Validate Signature\ValidateSignature.csproj", "{72FCF748-C42C-44D0-B61E-641AED296BD6}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -277,6 +283,14 @@ Global
 		{B45CBCA5-B5AA-4B01-BAFE-D9114B121E8A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B45CBCA5-B5AA-4B01-BAFE-D9114B121E8A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B45CBCA5-B5AA-4B01-BAFE-D9114B121E8A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B5394EEA-E8FE-4F16-BB17-37974C133684}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5394EEA-E8FE-4F16-BB17-37974C133684}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5394EEA-E8FE-4F16-BB17-37974C133684}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5394EEA-E8FE-4F16-BB17-37974C133684}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72FCF748-C42C-44D0-B61E-641AED296BD6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72FCF748-C42C-44D0-B61E-641AED296BD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72FCF748-C42C-44D0-B61E-641AED296BD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72FCF748-C42C-44D0-B61E-641AED296BD6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -323,6 +337,8 @@ Global
 		{F8D5CB61-9D3A-4966-A895-A09E9D2BB2F3} = {69F3CBE3-9726-433C-92DC-584746A40893}
 		{D676FBA5-B459-4E87-8182-5C60A2AA66BD} = {3B20C1AD-705C-4AE9-85FC-2770D0459395}
 		{B45CBCA5-B5AA-4B01-BAFE-D9114B121E8A} = {3B20C1AD-705C-4AE9-85FC-2770D0459395}
+		{B5394EEA-E8FE-4F16-BB17-37974C133684} = {0C492C83-05B0-4905-9C6D-97FB705B112B}
+		{72FCF748-C42C-44D0-B61E-641AED296BD6} = {0C492C83-05B0-4905-9C6D-97FB705B112B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {43489891-3B2E-4982-9C00-2EEFB438F5A7}

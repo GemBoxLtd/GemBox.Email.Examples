@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.29709.97
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32804.467
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hello World", "Hello World", "{1054B5C2-5089-4A39-A4E7-3C271468E0F5}"
 EndProject
@@ -100,6 +100,12 @@ EndProject
 Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "WordImport", "Common Uses\Word Import\WordImport.vbproj", "{54255FE0-FD41-457C-95BB-E597291DC68C}"
 EndProject
 Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "OAuth", "Common Uses\OAuth 2.0\OAuth.vbproj", "{33AC88C0-A762-47A9-B95B-9A6ADB64D9F9}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Signed Messages", "Signed Messages", "{E5D30A3C-0E1D-40AE-BA91-60C5481A37AE}"
+EndProject
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "SignAndUnsign", "Signed Messages\Sign and Unsign\SignAndUnsign.vbproj", "{26B5D0F3-51D1-4808-A2F6-4D671CDA3D02}"
+EndProject
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "ValidateSignature", "Signed Messages\Validate Signature\ValidateSignature.vbproj", "{BB2609FC-0BA2-42D4-A374-74D53BF6C5AB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -263,6 +269,14 @@ Global
 		{33AC88C0-A762-47A9-B95B-9A6ADB64D9F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{33AC88C0-A762-47A9-B95B-9A6ADB64D9F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{33AC88C0-A762-47A9-B95B-9A6ADB64D9F9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26B5D0F3-51D1-4808-A2F6-4D671CDA3D02}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26B5D0F3-51D1-4808-A2F6-4D671CDA3D02}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26B5D0F3-51D1-4808-A2F6-4D671CDA3D02}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26B5D0F3-51D1-4808-A2F6-4D671CDA3D02}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BB2609FC-0BA2-42D4-A374-74D53BF6C5AB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BB2609FC-0BA2-42D4-A374-74D53BF6C5AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BB2609FC-0BA2-42D4-A374-74D53BF6C5AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BB2609FC-0BA2-42D4-A374-74D53BF6C5AB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -307,6 +321,8 @@ Global
 		{9D627334-FA73-40DD-8DD5-ED84BF16A675} = {153877E0-31BC-45BE-82F1-3688E1D922AE}
 		{54255FE0-FD41-457C-95BB-E597291DC68C} = {153877E0-31BC-45BE-82F1-3688E1D922AE}
 		{33AC88C0-A762-47A9-B95B-9A6ADB64D9F9} = {153877E0-31BC-45BE-82F1-3688E1D922AE}
+		{26B5D0F3-51D1-4808-A2F6-4D671CDA3D02} = {E5D30A3C-0E1D-40AE-BA91-60C5481A37AE}
+		{BB2609FC-0BA2-42D4-A374-74D53BF6C5AB} = {E5D30A3C-0E1D-40AE-BA91-60C5481A37AE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {EBFEB09B-E156-463E-B2BB-B71A618C3124}

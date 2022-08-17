@@ -1,0 +1,14 @@
+Content-Type: text/plain
+Date: Fri, 2 Dec 2016 08:00:00 +0100
+From: Sender <sender@example.com>
+To: Receiver <receiver@example.com>
+Subject: Plain email example
+MIME-Version: 1.0
+
+Hi!
+
+This message was created and saved with GemBox.Email .NET component.
+More info can be found at http://www.gemboxsoftware.com/
+
+Regards,
+GemBox
