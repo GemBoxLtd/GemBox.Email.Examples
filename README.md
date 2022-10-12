@@ -6,7 +6,7 @@ GemBox.Email is a .NET component that enables you to read, write, and convert em
 
 With GemBox.Email you get a fast and reliable component that’s easy to use and doesn't depend on Microsoft Outlook. It requires only .NET so you can deploy your applications without having to think about other licenses.
 
-## GemBox.Email features
+## GemBox.Email Features
 
 - [Create a mail message](https://www.gemboxsoftware.com/email/examples/send-html-email-with-attachment-c-sharp-vb-net/603) with attachments and a multi-format message body.
 - [Save and load mail messages](https://www.gemboxsoftware.com/email/examples/c-sharp-outlook-msg-eml-mht/106) to and from an MSG / EML / MHTML / MBOX file or a stream.
@@ -29,7 +29,7 @@ With GemBox.Email you get a fast and reliable component that’s easy to use and
 
 You are not sure how to start working with email messages in .NET using GemBox.Email? Check the code below that shows how to create an email message from scratch and send it.
 
-```CSharp
+```csharp
 // If using Professional version, put your serial key below.
 ComponentInfo.SetLicense("FREE-LIMITED-KEY");
  
@@ -62,8 +62,8 @@ You can download GemBox.Email from [BugFixes 🛠️](https://www.gemboxsoftware
 ## Resources
 
 - [Product Page](https://www.gemboxsoftware.com/email)
+- [Examples](https://www.gemboxsoftware.com/email/examples)
 - [Documentation](https://www.gemboxsoftware.com/email/docs/introduction.html)
 - [API Reference](https://www.gemboxsoftware.com/email/docs/GemBox.Email.html)
-- [Examples](https://www.gemboxsoftware.com/email/examples)
 - [Forum](https://forum.gemboxsoftware.com/c/gembox-email/9)
 - [Blog](https://www.gemboxsoftware.com/gembox-email)
