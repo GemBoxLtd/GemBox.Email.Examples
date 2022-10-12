@@ -1,9 +1,12 @@
+[![NuGet version](https://img.shields.io/nuget/v/GemBox.Email?style=for-the-badge)](https://www.nuget.org/packages/GemBox.Email/) [![NuGet downloads](https://img.shields.io/nuget/dt/GemBox.Email?style=for-the-badge)](https://www.nuget.org/packages/GemBox.Email/) [![Visual Studio Marketplace rating](https://img.shields.io/visual-studio-marketplace/stars/GemBoxSoftware.GemBoxEmail?style=for-the-badge)](https://marketplace.visualstudio.com/items?itemName=GemBoxSoftware.GemBoxEmail)
+
+<img src="https://www.gemboxsoftware.com/images/NugetGbe.png" alt="GemBox.Email logo" align="left" />
+
 ## What is GemBox.Email?
 
 GemBox.Email is a .NET component that enables you to read, write, and convert email files (MSG, EML, and MHTML), or send and receive email messages (POP, IMAP, SMTP, and EWS) from .NET applications.
 
 With GemBox.Email you get a fast and reliable component that’s easy to use and doesn't depend on Microsoft Outlook. It requires only .NET so you can deploy your applications without having to think about other licenses.
-
 
 ## GemBox.Email features
 
@@ -24,7 +27,6 @@ With GemBox.Email you get a fast and reliable component that’s easy to use and
 - List and modify [message flags](https://www.gemboxsoftware.com/email/examples/message-flags/306) using the IMAP protocol.
 - [Search](https://www.gemboxsoftware.com/email/examples/c-sharp-vb-net-search-emails/308) for messages on a mail server using the IMAP protocol.
 
-
 ## Get Started
 
 You are not sure how to start working with email messages in .NET using GemBox.Email? Check the code below that shows how to create an email message from scratch and send it.
@@ -35,22 +37,22 @@ ComponentInfo.SetLicense("FREE-LIMITED-KEY");
  
 // Create a new email message.
 MailMessage message = new MailMessage(
-  new MailAddress("sender@example.com", "Sender"),
-  new MailAddress("first.receiver@example.com", "First receiver"),
-  new MailAddress("second.receiver@example.com", "Second receiver"));
+    new MailAddress("sender@example.com", "Sender"),
+    new MailAddress("first.receiver@example.com", "First receiver"),
+    new MailAddress("second.receiver@example.com", "Second receiver"));
 
 
 // Add subject and body.
 message.Subject = "Hello World!";
-message.BodyText = "H,\n" +
-"This message was created and sent with GemBox.Email.";
+message.BodyText = "Hi 👋,\n" +
+    "This message was created and sent with GemBox.Email.";
 
 // Create a new SMTP client and send the email message.
 using (SmtpClient smtp = new SmtpClient("<ADDRESS> (e.g. smtp.gmail.com)"))
 {
-  smtp.Connect();
-  smtp.Authenticate("<USERNAME>", "<PASSWORD>");
-  smtp.SendMessage(message);
+    smtp.Connect();
+    smtp.Authenticate("<USERNAME>", "<PASSWORD>");
+    smtp.SendMessage(message);
 }
 ```
 
@@ -67,7 +69,4 @@ You can download GemBox.Email from [BugFixes 🛠️](https://www.gemboxsoftware
 * [Blog](https://www.gemboxsoftware.com/gembox-email)
 * [API Reference](https://www.gemboxsoftware.com/email/docs/GemBox.Email)
 * [Examples](https://www.gemboxsoftware.com/email/examples/)
-* [Forum](https://forum.gemboxsoftware.com/c/gembox-spreadsheet/5?_gl=1*o1gi6x*_ga*ODY3NTY5MzAwLjE2NDM3MTc3NjI.*_ga_G0LNRYNV9V*MTY1NzU0NDc0Ni4xMDIwLjEuMTY1NzU0NjExMS4w&_ga=2.80711511.1545338655.1657544747-867569300.1643717762)
-
-
-
+* [Forum](https://forum.gemboxsoftware.com/c/gembox-spreadsheet/5)
