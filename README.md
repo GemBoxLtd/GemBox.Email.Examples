@@ -39,7 +39,6 @@ MailMessage message = new MailMessage(
     new MailAddress("first.receiver@example.com", "First receiver"),
     new MailAddress("second.receiver@example.com", "Second receiver"));
 
-
 // Add subject and body.
 message.Subject = "Hello World!";
 message.BodyText = "Hi 👋,\n" +
@@ -62,9 +61,9 @@ You can download GemBox.Email from [BugFixes 🛠️](https://www.gemboxsoftware
 
 ## Resources
 
-* [Product Page](https://www.gemboxsoftware.com/email)
-* [Documentation](https://www.gemboxsoftware.com/email/docs/introduction.html)
-* [Blog](https://www.gemboxsoftware.com/gembox-email)
-* [API Reference](https://www.gemboxsoftware.com/email/docs/GemBox.Email.html)
-* [Examples](https://www.gemboxsoftware.com/email/examples)
-* [Forum](https://forum.gemboxsoftware.com/c/gembox-email/9)
+- [Product Page](https://www.gemboxsoftware.com/email)
+- [Documentation](https://www.gemboxsoftware.com/email/docs/introduction.html)
+- [API Reference](https://www.gemboxsoftware.com/email/docs/GemBox.Email.html)
+- [Examples](https://www.gemboxsoftware.com/email/examples)
+- [Forum](https://forum.gemboxsoftware.com/c/gembox-email/9)
+- [Blog](https://www.gemboxsoftware.com/gembox-email)
