@@ -4,7 +4,7 @@
 
 GemBox.Email is a .NET component that enables you to read, write, and convert email files (MSG, EML, and MHTML), or send and receive email messages (POP, IMAP, SMTP, and EWS) from .NET applications.
 
-With GemBox.Email you get a fast and reliable component that’s easy to use and doesn't depend on Microsoft Outlook. It requires only .NET so you can deploy your applications without having to think about other licenses.
+With GemBox.Email you get a fast and reliable component that's easy to use and doesn't depend on Microsoft Outlook. It requires only .NET so you can deploy your applications without having to think about other licenses.
 
 ## GemBox.Email Features
 
