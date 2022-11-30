@@ -57,7 +57,7 @@ For more GemBox.Email code examples and demos, please visit our [examples page](
 
 ## Installation
 
-You can download GemBox.Email from [BugFixes 🛠️](https://www.gemboxsoftware.com/email/downloads/bugfixes.html) or from [NuGet 📦](https://www.nuget.org/packages/GemBox.Email/).
+You can download GemBox.Email from [NuGet 📦](https://www.nuget.org/packages/GemBox.Email/) or from [BugFixes 🛠️](https://www.gemboxsoftware.com/email/downloads/bugfixes.html).
 
 ## Resources
 
