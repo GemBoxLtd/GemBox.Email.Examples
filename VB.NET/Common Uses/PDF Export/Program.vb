@@ -7,10 +7,10 @@ Imports GemBox.Email.Mime
 Module Program
     Sub Main()
 
-        ' If using Professional version, put your GemBox.Email serial key below.
+        ' If using the Professional version, put your GemBox.Email serial key below.
         GemBox.Email.ComponentInfo.SetLicense("FREE-LIMITED-KEY")
 
-        ' If using Professional version, put your GemBox.Document serial key below.
+        ' If using the Professional version, put your GemBox.Document serial key below.
         GemBox.Document.ComponentInfo.SetLicense("FREE-LIMITED-KEY")
 
         Example1()

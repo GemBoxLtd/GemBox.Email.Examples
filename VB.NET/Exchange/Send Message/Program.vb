@@ -1,4 +1,4 @@
-﻿Imports System
+Imports System
 Imports GemBox.Email
 Imports GemBox.Email.Exchange
 
@@ -6,7 +6,7 @@ Module Program
 
     Sub Main()
 
-        ' If using Professional version, put your serial key below.
+        ' If using the Professional version, put your serial key below.
         ComponentInfo.SetLicense("FREE-LIMITED-KEY")
 
         ' Create a new email message.

@@ -7,7 +7,7 @@ Module Program
 
     Sub Main()
 
-        ' If using Professional version, put your serial key below.
+        ' If using the Professional version, put your serial key below.
         ComponentInfo.SetLicense("FREE-LIMITED-KEY")
 
         Using imap As New ImapClient("<ADDRESS> (e.g. imap.gmail.com)")

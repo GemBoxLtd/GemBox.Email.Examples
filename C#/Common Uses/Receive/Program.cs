@@ -13,7 +13,7 @@ class Program
 
     static void Example1()
     {
-        // If using Professional version, put your serial key below.
+        // If using the Professional version, put your serial key below.
         ComponentInfo.SetLicense("FREE-LIMITED-KEY");
 
         // Create POP client.
@@ -42,7 +42,7 @@ class Program
 
     static void Example2()
     {
-        // If using Professional version, put your serial key below.
+        // If using the Professional version, put your serial key below.
         ComponentInfo.SetLicense("FREE-LIMITED-KEY");
 
         // Create IMAP client.

@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
 using System.Diagnostics;
 using System.IO;
 using Microsoft.AspNetCore.Mvc;
@@ -12,7 +12,7 @@ namespace EmailCoreMvc.Controllers
     {
         static HomeController()
         {
-            // If using Professional version, put your serial key below.
+            // If using the Professional version, put your serial key below.
             ComponentInfo.SetLicense("FREE-LIMITED-KEY");
         }
 

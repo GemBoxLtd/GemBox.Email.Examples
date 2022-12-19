@@ -1,4 +1,4 @@
-﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations;
 using System.IO;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
@@ -17,7 +17,7 @@ namespace EmailCorePages.Pages
         {
             this.Message = new MessageModel();
 
-            // If using Professional version, put your serial key below.
+            // If using the Professional version, put your serial key below.
             ComponentInfo.SetLicense("FREE-LIMITED-KEY");
         }
 

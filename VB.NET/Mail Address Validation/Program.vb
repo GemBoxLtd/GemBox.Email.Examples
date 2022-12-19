@@ -12,7 +12,7 @@ Module Program
     End Sub
 
     Sub Example1()
-        ' If using Professional version, put your serial key below.
+        ' If using the Professional version, put your serial key below.
         ComponentInfo.SetLicense("FREE-LIMITED-KEY")
 
         ' Incorrectly formatted mail address.
@@ -37,7 +37,7 @@ Module Program
     End Sub
 
     Private Sub Example2()
-        ' If using Professional version, put your serial key below.
+        ' If using the Professional version, put your serial key below.
         ComponentInfo.SetLicense("FREE-LIMITED-KEY")
 
         ' Create a list of mail addresses.

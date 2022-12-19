@@ -4,7 +4,7 @@ Imports GemBox.Email
 Module Program
 
     Sub Main()
-        ' If using Professional version, put your serial key below.
+        ' If using the Professional version, put your serial key below.
         ComponentInfo.SetLicense("FREE-LIMITED-KEY")
 
         ' Create template message.
