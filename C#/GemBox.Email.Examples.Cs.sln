@@ -113,6 +113,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignAndUnsign", "Signed Mes
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValidateSignature", "Signed Messages\Validate Signature\ValidateSignature.csproj", "{72FCF748-C42C-44D0-B61E-641AED296BD6}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmailMaui", "Platforms\Maui\EmailMaui.csproj", "{1DC8C4A2-D4AC-4D72-8B6C-E8CA0FA26F27}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -291,6 +293,12 @@ Global
 		{72FCF748-C42C-44D0-B61E-641AED296BD6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{72FCF748-C42C-44D0-B61E-641AED296BD6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{72FCF748-C42C-44D0-B61E-641AED296BD6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DC8C4A2-D4AC-4D72-8B6C-E8CA0FA26F27}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1DC8C4A2-D4AC-4D72-8B6C-E8CA0FA26F27}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1DC8C4A2-D4AC-4D72-8B6C-E8CA0FA26F27}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{1DC8C4A2-D4AC-4D72-8B6C-E8CA0FA26F27}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1DC8C4A2-D4AC-4D72-8B6C-E8CA0FA26F27}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1DC8C4A2-D4AC-4D72-8B6C-E8CA0FA26F27}.Release|Any CPU.Deploy.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -339,6 +347,7 @@ Global
 		{B45CBCA5-B5AA-4B01-BAFE-D9114B121E8A} = {3B20C1AD-705C-4AE9-85FC-2770D0459395}
 		{B5394EEA-E8FE-4F16-BB17-37974C133684} = {0C492C83-05B0-4905-9C6D-97FB705B112B}
 		{72FCF748-C42C-44D0-B61E-641AED296BD6} = {0C492C83-05B0-4905-9C6D-97FB705B112B}
+		{1DC8C4A2-D4AC-4D72-8B6C-E8CA0FA26F27} = {3B20C1AD-705C-4AE9-85FC-2770D0459395}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {43489891-3B2E-4982-9C00-2EEFB438F5A7}
