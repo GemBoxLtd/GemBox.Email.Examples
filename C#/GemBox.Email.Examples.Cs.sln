@@ -113,7 +113,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignAndUnsign", "Signed Mes
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ValidateSignature", "Signed Messages\Validate Signature\ValidateSignature.csproj", "{72FCF748-C42C-44D0-B61E-641AED296BD6}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmailMaui", "Platforms\Maui\EmailMaui.csproj", "{1DC8C4A2-D4AC-4D72-8B6C-E8CA0FA26F27}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmailMaui", "Platforms\MAUI\EmailMaui.csproj", "{1DC8C4A2-D4AC-4D72-8B6C-E8CA0FA26F27}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
