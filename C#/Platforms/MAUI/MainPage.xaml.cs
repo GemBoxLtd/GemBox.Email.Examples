@@ -35,12 +35,19 @@ namespace EmailMaui
             button.IsEnabled = false;
             activity.IsRunning = true;
 
-            var message = await Task.Run(GetMessage);
-            await DisplayAlert("Message",
-                "\nSUBJECT: " + message.Subject +
-                "\nFROM: " + message.From.ToString() +
-                "\nDATE: " + message.Date.ToString(),
-                "Close");
+            try
+            {
+                var message = await Task.Run(GetMessage);
+                await DisplayAlert("Message",
+                    "\nSUBJECT: " + message.Subject +
+                    "\nFROM: " + message.From.ToString() +
+                    "\nDATE: " + message.Date.ToString(),
+                    "Close");
+            }
+            catch (Exception ex)
+            {
+                await DisplayAlert("Error", ex.Message, "Close");
+            }
 
             activity.IsRunning = false;
             button.IsEnabled = true;
