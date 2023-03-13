@@ -1,0 +1,40 @@
+﻿@page "/"
+@inject IJSRuntime JS
+@using BlazorServerApp.Data
+@using System.IO
+@using GemBox.Email
+
+<h1>Email generator [Blazor Server App]</h1>
+
+<EditForm Model="model" OnSubmit="CreateEmail">
+    <div class="form-group">Header text: <InputText @bind-Value="model.Sender" class="form-control"></InputText></div>
+    <div class="form-group">Body text: <InputText @bind-Value="model.Receiver" class="form-control"></InputText></div>
+    <div class="form-group">Footer text: <InputText @bind-Value="model.Subject" class="form-control"></InputText></div>
+    <div class="form-group">Message [HTML]: <InputTextArea @bind-Value="model.Message" class="form-control" rows="8"></InputTextArea></div>
+    <div class="form-group"><button class="btn btn-primary mt-2" type="submit">Create</button></div>
+</EditForm>
+
+@code {
+    private MessageModel model = new();
+
+    private async Task CreateEmail()
+    {
+        ComponentInfo.SetLicense("FREE-LIMITED-KEY");
+
+        // Create email.
+        var message = new MailMessage(model.Sender, model.Receiver)
+        {
+            Subject = model.Subject,
+            BodyHtml = model.Message
+        };
+
+        // Save EML file.
+        var stream = new MemoryStream();
+        message.Save(stream, MailMessageFormat.Eml);
+        stream.Position = 0;
+
+        // Download file.
+        using var streamRef = new DotNetStreamReference(stream);
+        await JS.InvokeVoidAsync("downloadFileFromStream", "BlazorServerOutput.eml", streamRef);
+    }
+}
