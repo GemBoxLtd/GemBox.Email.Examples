@@ -15,7 +15,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Load", "Common Uses\Load\Lo
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Receive", "Common Uses\Receive\Receive.csproj", "{5A4F95BA-FC9F-4C10-8B18-25FDA4298568}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Reply", "Common Uses\Reply\Reply.csproj", "{770001C7-28B1-462E-9CAA-1CF68C74C264}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ReplyAndForward", "Common Uses\Reply and Forward\ReplyAndForward.csproj", "{770001C7-28B1-462E-9CAA-1CF68C74C264}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Save", "Common Uses\Save\Save.csproj", "{6CA85833-881B-4686-9F36-71071CC734ED}"
 EndProject

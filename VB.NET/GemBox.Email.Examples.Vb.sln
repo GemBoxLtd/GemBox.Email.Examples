@@ -15,7 +15,7 @@ Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "Load", "Common Uses\Load\Lo
 EndProject
 Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "Receive", "Common Uses\Receive\Receive.vbproj", "{B3DFDA9A-1712-4E0E-9338-C5E3493A6028}"
 EndProject
-Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "Reply", "Common Uses\Reply\Reply.vbproj", "{9A1CD567-A76F-48F5-AE53-7326D41321A8}"
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "ReplyAndForward", "Common Uses\Reply and Forward\ReplyAndForward.vbproj", "{9A1CD567-A76F-48F5-AE53-7326D41321A8}"
 EndProject
 Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "Save", "Common Uses\Save\Save.vbproj", "{4E6F28FA-3B11-4F62-B778-9FF8B579A6FC}"
 EndProject
