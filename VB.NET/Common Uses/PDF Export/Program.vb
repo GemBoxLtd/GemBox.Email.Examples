@@ -1,5 +1,4 @@
 Imports System.Linq
-Imports System.Text.RegularExpressions
 Imports GemBox.Document
 Imports GemBox.Email
 Imports GemBox.Email.Mime
@@ -26,7 +25,11 @@ Module Program
         Dim document As DocumentModel = New DocumentModel()
 
         ' Import the email's body to the document.
-        LoadBody(message, document)
+        If Not String.IsNullOrEmpty(message.BodyHtml) Then
+            document.Content.End.LoadText(message.GetEmbeddedBodyHtml(), LoadOptions.HtmlDefault)
+        Else
+            document.Content.End.LoadText(message.BodyText, LoadOptions.TxtDefault)
+        End If
 
         ' Save the document as PDF.
         document.Save("Export1.pdf")
@@ -74,7 +77,7 @@ Module Program
         If Not String.IsNullOrEmpty(message.BodyHtml) Then
             ' Load the HTML body to the document.
             document.Content.End.LoadText(
-                ReplaceEmbeddedImages(message.BodyHtml, message.Attachments),
+                message.GetEmbeddedBodyHtml(),
                 LoadOptions.HtmlDefault)
         Else
             ' Load the TXT body to the document.
@@ -84,34 +87,6 @@ Module Program
         End If
 
     End Sub
-
-    ' Replace attached CID images to inlined DATA urls.
-    Function ReplaceEmbeddedImages(htmlBody As String, attachments As AttachmentCollection) As String
-
-        Dim srcPattern =
-            "(?<=<img.+?src=[""'])" &
-            "(.+?)" &
-            "(?=[""'].*?>)"
-
-        ' Iterate through the "src" attributes from HTML images in reverse order.
-        For Each match In Regex.Matches(htmlBody, srcPattern, RegexOptions.IgnoreCase).Cast(Of Match)().Reverse()
-            Dim imageId = match.Value.Replace("cid:", "")
-            Dim attachment As Attachment = attachments.FirstOrDefault(Function(a) a.ContentId = imageId)
-
-            If attachment IsNot Nothing Then
-                ' Create inlined image data. E.g. "data:image/png;base64,AABBCC..."
-                Dim entity As ContentEntity = attachment.MimeEntity
-                Dim embeddedImage = entity.Charset.GetString(entity.Content)
-                Dim embeddedSrc = $"data:{entity.ContentType};{entity.TransferEncoding},{embeddedImage}"
-
-                ' Replace the "src" attribute with the inlined image.
-                htmlBody = $"{htmlBody.Substring(0, match.Index)}{embeddedSrc}{htmlBody.Substring(match.Index + match.Length)}"
-            End If
-        Next
-
-        Return htmlBody
-
-    End Function
 
     Sub LoadAttachments(attachments As AttachmentCollection, document As DocumentModel)
 

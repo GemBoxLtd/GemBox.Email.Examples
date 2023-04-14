@@ -1,5 +1,4 @@
 using System.Linq;
-using System.Text.RegularExpressions;
 using GemBox.Document;
 using GemBox.Email;
 using GemBox.Email.Mime;
@@ -27,7 +26,10 @@ class Program
         DocumentModel document = new DocumentModel();
 
         // Import the email's body to the document.
-        LoadBody(message, document);
+        if (!string.IsNullOrEmpty(message.BodyHtml))
+            document.Content.End.LoadText(message.GetEmbeddedBodyHtml(), LoadOptions.HtmlDefault);
+        else
+            document.Content.End.LoadText(message.BodyText, LoadOptions.TxtDefault);
 
         // Save the document as PDF.
         document.Save("Export1.pdf");
@@ -75,42 +77,13 @@ class Program
         if (!string.IsNullOrEmpty(message.BodyHtml))
             // Load the HTML body to the document.
             document.Content.End.LoadText(
-                ReplaceEmbeddedImages(message.BodyHtml, message.Attachments),
+                message.GetEmbeddedBodyHtml(),
                 LoadOptions.HtmlDefault);
         else
             // Load the TXT body to the document.
             document.Content.End.LoadText(
                 message.BodyText,
                 LoadOptions.TxtDefault);
-    }
-
-    // Replace attached CID images to inlined DATA urls.
-    static string ReplaceEmbeddedImages(string htmlBody, AttachmentCollection attachments)
-    {
-        var srcPattern =
-            "(?<=<img.+?src=[\"'])" +
-            "(.+?)" +
-            "(?=[\"'].*?>)";
-
-        // Iterate through the "src" attributes from HTML images in reverse order.
-        foreach (var match in Regex.Matches(htmlBody, srcPattern, RegexOptions.IgnoreCase).Cast<Match>().Reverse())
-        {
-            var imageId = match.Value.Replace("cid:", "");
-            Attachment attachment = attachments.FirstOrDefault(a => a.ContentId == imageId);
-
-            if (attachment != null)
-            {
-                // Create inlined image data. E.g. "data:image/png;base64,AABBCC..."
-                ContentEntity entity = attachment.MimeEntity;
-                var embeddedImage = entity.Charset.GetString(entity.Content);
-                var embeddedSrc = $"data:{entity.ContentType};{entity.TransferEncoding},{embeddedImage}";
-
-                // Replace the "src" attribute with the inlined image.
-                htmlBody = $"{htmlBody.Substring(0, match.Index)}{embeddedSrc}{htmlBody.Substring(match.Index + match.Length)}";
-            }
-        }
-
-        return htmlBody;
     }
 
     static void LoadAttachments(AttachmentCollection attachments, DocumentModel document)

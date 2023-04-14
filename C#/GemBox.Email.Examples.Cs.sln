@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32804.467
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Hello World", "Hello World", "{F9D84BFA-B844-4B3A-B0CA-E5543CEE611A}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Getting Started", "Getting Started", "{F9D84BFA-B844-4B3A-B0CA-E5543CEE611A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelloWorld", "Hello World\HelloWorld.csproj", "{741E09FB-7B89-400E-BF1F-C348BFB661FB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GettingStarted", "Getting Started\GettingStarted.csproj", "{741E09FB-7B89-400E-BF1F-C348BFB661FB}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common Uses", "Common Uses", "{69F3CBE3-9726-433C-92DC-584746A40893}"
 EndProject
@@ -118,6 +118,8 @@ EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWebAssemblyApp", "Platforms\Blazor\WebAssembly App\BlazorWebAssemblyApp.csproj", "{B66B20F2-4E13-4097-84D5-57E2FBD10939}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmailMaui", "Platforms\MAUI\EmailMaui.csproj", "{1DC8C4A2-D4AC-4D72-8B6C-E8CA0FA26F27}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Search", "Exchange\Search\Search.csproj", "{3BBB00F1-4CA3-4717-BE19-EE7A7F99C521}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -311,6 +313,10 @@ Global
 		{1DC8C4A2-D4AC-4D72-8B6C-E8CA0FA26F27}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1DC8C4A2-D4AC-4D72-8B6C-E8CA0FA26F27}.Release|Any CPU.Build.0 = Release|Any CPU
 		{1DC8C4A2-D4AC-4D72-8B6C-E8CA0FA26F27}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{3BBB00F1-4CA3-4717-BE19-EE7A7F99C521}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3BBB00F1-4CA3-4717-BE19-EE7A7F99C521}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3BBB00F1-4CA3-4717-BE19-EE7A7F99C521}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3BBB00F1-4CA3-4717-BE19-EE7A7F99C521}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -362,6 +368,7 @@ Global
 		{24137479-6B18-4C98-BC36-FF1E77766368} = {3B20C1AD-705C-4AE9-85FC-2770D0459395}
 		{B66B20F2-4E13-4097-84D5-57E2FBD10939} = {3B20C1AD-705C-4AE9-85FC-2770D0459395}
 		{1DC8C4A2-D4AC-4D72-8B6C-E8CA0FA26F27} = {3B20C1AD-705C-4AE9-85FC-2770D0459395}
+		{3BBB00F1-4CA3-4717-BE19-EE7A7F99C521} = {8AD8720D-EDFF-495B-9F02-01B9BB1DFB50}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {43489891-3B2E-4982-9C00-2EEFB438F5A7}
