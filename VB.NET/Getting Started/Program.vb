@@ -1,5 +1,5 @@
 Imports GemBox.Email
-Imports GemBox.Email.Pop
+Imports GemBox.Email.Smtp
 
 Module Program
 
@@ -27,7 +27,7 @@ Module Program
             "This message was created and sent with GemBox.Email (https://www.gemboxsoftware.com/email)"
 
         ' Add file as attachment.
-        message.Attachments.Add(New Attachment("GemBoxSampleFile.pdf"));
+        message.Attachments.Add(New Attachment("GemBoxSampleFile.pdf"))
 
         ' Create New SMTP client And send an email message.
         Using smtp As New SmtpClient("<ADDRESS> (e.g. smtp.gmail.com)")
