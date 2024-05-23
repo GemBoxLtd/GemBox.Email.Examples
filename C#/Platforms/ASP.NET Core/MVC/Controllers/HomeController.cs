@@ -1,25 +1,19 @@
-using System.ComponentModel.DataAnnotations;
-using System.Diagnostics;
-using System.IO;
-using Microsoft.AspNetCore.Mvc;
 using EmailCoreMvc.Models;
 using GemBox.Email;
 using GemBox.Email.Mime;
+using Microsoft.AspNetCore.Mvc;
+using System.ComponentModel.DataAnnotations;
+using System.Diagnostics;
+using System.IO;
 
 namespace EmailCoreMvc.Controllers
 {
     public class HomeController : Controller
     {
-        static HomeController()
-        {
-            // If using the Professional version, put your serial key below.
-            ComponentInfo.SetLicense("FREE-LIMITED-KEY");
-        }
+        // If using the Professional version, put your serial key below.
+        static HomeController() => ComponentInfo.SetLicense("FREE-LIMITED-KEY");
 
-        public IActionResult Index()
-        {
-            return View(new MessageModel());
-        }
+        public IActionResult Index() => this.View(new MessageModel());
 
         public FileStreamResult Download(MessageModel model)
         {
@@ -40,10 +34,8 @@ namespace EmailCoreMvc.Controllers
         }
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
-        {
-            return View(new ErrorViewModel() { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
-        }
+        public IActionResult Error() => 
+            this.View(new ErrorViewModel() { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
     }
 }
 

@@ -1,10 +1,10 @@
-using System.ComponentModel.DataAnnotations;
-using System.IO;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.RazorPages;
 using EmailCorePages.Models;
 using GemBox.Email;
 using GemBox.Email.Mime;
+using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.ComponentModel.DataAnnotations;
+using System.IO;
 
 namespace EmailCorePages.Pages
 {
@@ -13,13 +13,10 @@ namespace EmailCorePages.Pages
         [BindProperty]
         public MessageModel Message { get; set; }
 
-        public IndexModel()
-        {
-            this.Message = new MessageModel();
+        // If using the Professional version, put your serial key below.
+        static IndexModel() => ComponentInfo.SetLicense("FREE-LIMITED-KEY");
 
-            // If using the Professional version, put your serial key below.
-            ComponentInfo.SetLicense("FREE-LIMITED-KEY");
-        }
+        public IndexModel() => this.Message = new MessageModel();
 
         public void OnGet() { }
 

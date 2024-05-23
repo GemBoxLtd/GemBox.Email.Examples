@@ -5,10 +5,9 @@ Imports GemBox.Email
 Module Program
 
     Sub Main()
-
         Example1()
         Example2()
-
+        Example3()
     End Sub
 
     Sub Example1()
@@ -36,7 +35,7 @@ Module Program
         Console.WriteLine($"Address: {address,-40} | Result: {result.Status}")
     End Sub
 
-    Private Sub Example2()
+    Sub Example2()
         ' If using the Professional version, put your serial key below.
         ComponentInfo.SetLicense("FREE-LIMITED-KEY")
 
@@ -57,4 +56,53 @@ Module Program
             Console.WriteLine($"| {addresses(i),-35} | {results(i).Status,15} |")
         Next
     End Sub
+
+    Sub Example3()
+        ' If using the Professional version, put your serial key below.
+        ComponentInfo.SetLicense("FREE-LIMITED-KEY")
+
+        Console.WriteLine($"| {"OPTION",-10} | {"MAIL ADDRESS",-35} | {"RESULT",15} |")
+
+        ' Creating email variables for validation
+        Dim invalidSyntaxMail = "invalid.address_gemboxsoftware.com"
+        Dim invalidDomainMail = "no-domain@gemboxsoftware123.com"
+        Dim invalidAddressMail = "no-address@gemboxsoftware.com"
+        Dim validMail = "info@gemboxsoftware.com"
+
+        ' Incorrectly formatted mail address will fail syntax only validation.
+        Dim [option] = MailAddressValidationOptions.Syntax
+        Dim result = MailAddressValidator.Validate(invalidSyntaxMail, [option])
+        Console.WriteLine($"| {[option],-10} | {invalidSyntaxMail,-35} | {result.Status,15} |")
+
+        ' Non-existing mail address domain will succeed syntax only validation.
+        [option] = MailAddressValidationOptions.Syntax
+        result = MailAddressValidator.Validate(invalidDomainMail, [option])
+        Console.WriteLine($"| {[option],-10} | {invalidDomainMail,-35} | {result.Status,15} |")
+
+        ' Non-existing mail address domain will fail domain validation.
+        [option] = MailAddressValidationOptions.Domain
+        result = MailAddressValidator.Validate(invalidDomainMail, [option])
+        Console.WriteLine($"| {[option],-10} | {invalidDomainMail,-35} | {result.Status,15} |")
+
+        ' Non-existing mail address account in a valid domain will succeed domain validation.
+        [option] = MailAddressValidationOptions.Domain
+        result = MailAddressValidator.Validate(invalidAddressMail, [option])
+        Console.WriteLine($"| {[option],-10} | {invalidAddressMail,-35} | {result.Status,15} |")
+
+        ' Non-existing mail address account in a valid domain will also succeed server validation, because the mail server is reachable
+        [option] = MailAddressValidationOptions.Server
+        result = MailAddressValidator.Validate(invalidAddressMail, [option])
+        Console.WriteLine($"| {[option],-10} | {invalidAddressMail,-35} | {result.Status,15} |")
+
+        ' Non-existing mail address account in a valid domain will fail mailbox validation
+        [option] = MailAddressValidationOptions.Mailbox
+        result = MailAddressValidator.Validate(invalidAddressMail, [option])
+        Console.WriteLine($"| {[option],-10} | {invalidAddressMail,-35} | {result.Status,15} |")
+
+        ' Valid mail address will succeed all validation steps.
+        [option] = MailAddressValidationOptions.Mailbox
+        result = MailAddressValidator.Validate(validMail, [option])
+        Console.WriteLine($"| {[option],-10} | {validMail,-35} | {result.Status,15} |")
+    End Sub
+
 End Module
