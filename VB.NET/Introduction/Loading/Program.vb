@@ -1,5 +1,5 @@
-Imports System
 Imports GemBox.Email
+Imports System
 
 Module Program
 

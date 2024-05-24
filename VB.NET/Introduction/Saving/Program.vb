@@ -1,6 +1,6 @@
+Imports GemBox.Email
 Imports System.IO
 Imports System.IO.Compression
-Imports GemBox.Email
 
 Module Program
 

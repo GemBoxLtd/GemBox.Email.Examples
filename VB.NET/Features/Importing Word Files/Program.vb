@@ -1,8 +1,8 @@
-Imports System
-Imports System.IO
 Imports GemBox.Document
 Imports GemBox.Email
 Imports GemBox.Email.Smtp
+Imports System
+Imports System.IO
 
 Module Program
     Sub Main()

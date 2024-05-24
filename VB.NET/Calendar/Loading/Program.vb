@@ -1,6 +1,6 @@
-Imports System
 Imports GemBox.Email
 Imports GemBox.Email.Calendar
+Imports System
 
 Module Program
 

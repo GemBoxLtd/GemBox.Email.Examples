@@ -1,7 +1,7 @@
-Imports System
-Imports System.Linq
 Imports GemBox.Email
 Imports GemBox.Email.Calendar
+Imports System
+Imports System.Linq
 
 Module Program
 

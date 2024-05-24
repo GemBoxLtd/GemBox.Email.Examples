@@ -1,7 +1,7 @@
-Imports System
-Imports System.Collections.Generic
 Imports GemBox.Email
 Imports GemBox.Email.Pop
+Imports System
+Imports System.Collections.Generic
 
 Module Program
 

@@ -1,15 +1,12 @@
-Imports System.Linq
 Imports GemBox.Email
 Imports GemBox.Email.Imap
 Imports GemBox.Email.Mime
 Imports GemBox.Email.Smtp
+Imports System.Linq
 
 Module Program
 
     Sub Main()
-
-        ' If using the Professional version, put your serial key below.
-        ComponentInfo.SetLicense("FREE-LIMITED-KEY")
 
         Example1()
         Example2()
@@ -17,6 +14,9 @@ Module Program
     End Sub
 
     Sub Example1()
+        ' If using the Professional version, put your serial key below.
+        ComponentInfo.SetLicense("FREE-LIMITED-KEY")
+
         ' Retrieve original message.
         Dim originalMessage As MailMessage
         Using imap As New ImapClient("<ADDRESS> (e.g. imap.gmail.com)")
@@ -57,6 +57,9 @@ Module Program
     End Sub
 
     Sub Example2()
+        ' If using the Professional version, put your serial key below.
+        ComponentInfo.SetLicense("FREE-LIMITED-KEY")
+
         ' Retrieve original message.
         Dim originalMessage As MailMessage
         Using imap As New ImapClient("<ADDRESS> (e.g. imap.gmail.com)")

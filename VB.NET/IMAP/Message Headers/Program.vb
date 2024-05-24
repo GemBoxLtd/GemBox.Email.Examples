@@ -1,7 +1,7 @@
-Imports System
 Imports GemBox.Email
 Imports GemBox.Email.Imap
 Imports GemBox.Email.Mime
+Imports System
 
 Module Program
 

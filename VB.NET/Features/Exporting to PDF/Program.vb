@@ -1,7 +1,7 @@
-Imports System.Linq
 Imports GemBox.Document
 Imports GemBox.Email
 Imports GemBox.Email.Mime
+Imports System.Linq
 
 Module Program
     Sub Main()

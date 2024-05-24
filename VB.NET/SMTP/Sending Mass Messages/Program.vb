@@ -1,10 +1,10 @@
+Imports GemBox.Email
+Imports GemBox.Email.Smtp
 Imports System
 Imports System.Collections.Generic
 Imports System.Linq
 Imports System.Threading
 Imports System.Threading.Tasks
-Imports GemBox.Email
-Imports GemBox.Email.Smtp
 
 Module Program
 

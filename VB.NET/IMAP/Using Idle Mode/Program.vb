@@ -1,9 +1,9 @@
+Imports GemBox.Email
+Imports GemBox.Email.Imap
 Imports System
 Imports System.Collections.Generic
 Imports System.Linq
 Imports System.Threading
-Imports GemBox.Email
-Imports GemBox.Email.Imap
 
 Module Program
 

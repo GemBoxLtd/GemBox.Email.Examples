@@ -1,9 +1,9 @@
+Imports GemBox.Email
+Imports GemBox.Email.Security
+Imports GemBox.Email.Smtp
 Imports System
 Imports System.Net.Security
 Imports System.Security.Cryptography.X509Certificates
-Imports GemBox.Email
-Imports GemBox.Email.Smtp
-Imports GemBox.Email.Security
 
 Module Program
 
