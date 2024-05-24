@@ -1,7 +1,7 @@
-using System;
-using System.Linq;
 using GemBox.Email;
 using GemBox.Email.Calendar;
+using System;
+using System.Linq;
 
 class Program
 {

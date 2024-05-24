@@ -1,6 +1,6 @@
+using GemBox.Email;
 using System.IO;
 using System.IO.Compression;
-using GemBox.Email;
 
 class Program
 {

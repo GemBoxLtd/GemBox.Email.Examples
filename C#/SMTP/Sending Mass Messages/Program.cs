@@ -1,10 +1,10 @@
+using GemBox.Email;
+using GemBox.Email.Smtp;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
 using System.Threading.Tasks;
-using GemBox.Email;
-using GemBox.Email.Smtp;
 
 class Program
 {

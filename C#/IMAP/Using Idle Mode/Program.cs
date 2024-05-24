@@ -1,9 +1,9 @@
+using GemBox.Email;
+using GemBox.Email.Imap;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
-using GemBox.Email;
-using GemBox.Email.Imap;
 
 class Program
 {

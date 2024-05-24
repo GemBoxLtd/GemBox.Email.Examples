@@ -1,5 +1,5 @@
-using System;
 using GemBox.Email;
+using System;
 
 class Program
 {

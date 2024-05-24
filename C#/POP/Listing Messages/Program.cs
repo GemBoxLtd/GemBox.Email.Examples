@@ -1,7 +1,7 @@
-using System;
-using System.Collections.Generic;
 using GemBox.Email;
 using GemBox.Email.Pop;
+using System;
+using System.Collections.Generic;
 
 class Program
 {

@@ -1,6 +1,6 @@
-using System;
 using GemBox.Email;
 using GemBox.Email.Smtp;
+using System;
 
 class Program
 {

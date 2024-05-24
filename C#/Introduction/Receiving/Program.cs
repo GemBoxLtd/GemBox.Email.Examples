@@ -1,7 +1,7 @@
-using System;
 using GemBox.Email;
-using GemBox.Email.Pop;
 using GemBox.Email.Imap;
+using GemBox.Email.Pop;
+using System;
 
 class Program
 {

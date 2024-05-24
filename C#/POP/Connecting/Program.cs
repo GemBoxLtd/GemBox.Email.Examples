@@ -1,6 +1,6 @@
-using System;
 using GemBox.Email;
 using GemBox.Email.Pop;
+using System;
 
 class Program
 {

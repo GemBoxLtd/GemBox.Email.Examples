@@ -1,7 +1,7 @@
-using System;
 using GemBox.Email;
 using GemBox.Email.Imap;
 using GemBox.Email.Mime;
+using System;
 
 class Program
 {

@@ -1,9 +1,9 @@
-using System;
-using System.Net.Security;
-using System.Security.Cryptography.X509Certificates;
 using GemBox.Email;
 using GemBox.Email.Imap;
 using GemBox.Email.Security;
+using System;
+using System.Net.Security;
+using System.Security.Cryptography.X509Certificates;
 
 class Program
 {
