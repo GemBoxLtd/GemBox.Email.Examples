@@ -55,10 +55,10 @@ Module Program
             "</body></html>"
 
         ' Add image as inline attachment.
-        message.Attachments.Add(New Attachment("%#GemBoxEmailLogo.png%") With {.ContentId = cid})
+        message.Attachments.Add(New Attachment("GemBoxEmailLogo.png") With {.ContentId = cid})
 
         ' Add file as attachment.
-        message.Attachments.Add(New Attachment("%#GemBoxSampleFile.pdf%"))
+        message.Attachments.Add(New Attachment("GemBoxSampleFile.pdf"))
 
         ' Create a new Exchange client and send the email message.
         Dim exchangeClient = New ExchangeClient("<HOST> (e.g. https://outlook.office365.com/EWS/Exchange.asmx)")
