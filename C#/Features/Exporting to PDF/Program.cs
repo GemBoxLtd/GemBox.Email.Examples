@@ -7,18 +7,18 @@ class Program
 {
     static void Main()
     {
-        // If using the Professional version, put your GemBox.Email serial key below.
-        GemBox.Email.ComponentInfo.SetLicense("FREE-LIMITED-KEY");
-        
-        // If using the Professional version, put your GemBox.Document serial key below.
-        GemBox.Document.ComponentInfo.SetLicense("FREE-LIMITED-KEY");
-
         Example1();
         Example2();
     }
 
     static void Example1()
     {
+        // If using the Professional version, put your GemBox.Email serial key below.
+        GemBox.Email.ComponentInfo.SetLicense("FREE-LIMITED-KEY");
+
+        // If using the Professional version, put your GemBox.Document serial key below.
+        GemBox.Document.ComponentInfo.SetLicense("FREE-LIMITED-KEY");
+
         // Load an email file.
         MailMessage message = MailMessage.Load("Html.eml");
 
@@ -32,11 +32,17 @@ class Program
             document.Content.End.LoadText(message.BodyText, LoadOptions.TxtDefault);
 
         // Save the document as PDF.
-        document.Save("Export1.pdf");
+        document.Save("Export.pdf");
     }
 
     static void Example2()
     {
+        // If using the Professional version, put your GemBox.Email serial key below.
+        GemBox.Email.ComponentInfo.SetLicense("FREE-LIMITED-KEY");
+
+        // If using the Professional version, put your GemBox.Document serial key below.
+        GemBox.Document.ComponentInfo.SetLicense("FREE-LIMITED-KEY");
+
         // Load an email file.
         MailMessage message = MailMessage.Load("Attachment.eml");
 
@@ -49,7 +55,7 @@ class Program
         LoadAttachments(message.Attachments, document);
 
         // Save the document as PDF.
-        document.Save("Export2.pdf");
+        document.Save("ExportWithAttachments.pdf");
     }
 
     static void LoadHeaders(MailMessage message, DocumentModel document)

@@ -1,10 +1,15 @@
 using GemBox.Email;
 using GemBox.Email.Exchange;
-using System;
 
 class Program
 {
     static void Main()
+    {
+        Example1();
+        Example2();
+    }
+
+    static void Example1()
     {
         // If using the Professional version, put your serial key below.
         ComponentInfo.SetLicense("FREE-LIMITED-KEY");
@@ -27,6 +32,38 @@ class Program
             "Read more about it on https://www.gemboxsoftware.com/email";
 
         // Create a new Exchange client and send an email message.
+        var exchangeClient = new ExchangeClient("<HOST> (e.g. https://outlook.office365.com/EWS/Exchange.asmx)");
+        exchangeClient.Authenticate("<USERNAME>", "<PASSWORD>");
+        exchangeClient.SendMessage(message);
+    }
+
+    static void Example2()
+    {
+        // If using the Professional version, put your serial key below.
+        ComponentInfo.SetLicense("FREE-LIMITED-KEY");
+
+        // Create new email message.
+        MailMessage message = new MailMessage("sender@example.com", "receiver@example.com");
+
+        // Add subject.
+        message.Subject = "Send HTML Email with Image and Attachment";
+
+        // Add HTML body with CID embedded image.
+        string cid = "image001@gembox.com";
+        message.BodyHtml = "<html><body>" +
+            "<p>Hi 👋,</p>" +
+            "<p>This message was created and sent with:</p>" +
+            "<p><img src='cid:" + cid + "'/></p>" +
+            "<p>Read more about it on <a href='https://www.gemboxsoftware.com/email'>GemBox.Email Overview</a> page.</p>" +
+            "</body></html>";
+
+        // Add image as an inline attachment.
+        message.Attachments.Add(new Attachment("GemBoxEmailLogo.png") { ContentId = cid });
+
+        // Add PDF as an attachment.
+        message.Attachments.Add(new Attachment("GemBoxSampleFile.pdf"));
+
+        // Create a new Exchange client and send the email message.
         var exchangeClient = new ExchangeClient("<HOST> (e.g. https://outlook.office365.com/EWS/Exchange.asmx)");
         exchangeClient.Authenticate("<USERNAME>", "<PASSWORD>");
         exchangeClient.SendMessage(message);

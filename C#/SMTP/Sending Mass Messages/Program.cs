@@ -75,8 +75,8 @@ class Program
     {
         var sourceChunks = new List<List<string>>();
 
-        for (int i = 0, count = source.Count; i < count; i += size)
-            sourceChunks.Add(source.GetRange(i, Math.Min(size, count - i)));
+        for (int i = 0; i < source.Count; i += size)
+            sourceChunks.Add(source.GetRange(i, Math.Min(size, source.Count - i)));
 
         return sourceChunks;
     }

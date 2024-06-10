@@ -23,7 +23,7 @@ Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "Converting", "Introduction\
 EndProject
 Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "Loading", "Introduction\Loading\Loading.vbproj", "{B650AC24-9F56-4628-8020-DAA500BEA6C8}"
 EndProject
-Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "OAuth", "Introduction\OAuth 2.0\OAuth.vbproj", "{48E5E085-1999-4546-9296-6826FE2F60A2}"
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "OAuth2", "Introduction\OAuth 2\OAuth2.vbproj", "{48E5E085-1999-4546-9296-6826FE2F60A2}"
 EndProject
 Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "Receiving", "Introduction\Receiving\Receiving.vbproj", "{14C34142-F362-4A43-8E6C-2B058FB30BB7}"
 EndProject
@@ -71,7 +71,7 @@ Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "ListingFolderFlags", "IMAP\
 EndProject
 Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "ListingMessages", "IMAP\Listing Messages\ListingMessages.vbproj", "{A68888D3-30DF-4342-BC37-8DB2CA30854B}"
 EndProject
-Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "ListingEmailFolders", "IMAP\ListingEmailFolders\ListingEmailFolders.vbproj", "{C87567A5-7681-4844-B171-A2AF81092126}"
+Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "ListingEmailFolders", "IMAP\Listing Email Folders\ListingEmailFolders.vbproj", "{C87567A5-7681-4844-B171-A2AF81092126}"
 EndProject
 Project("{778DAE3C-4631-46EA-AA77-85C1314464D9}") = "MessageFlags", "IMAP\Message Flags\MessageFlags.vbproj", "{4CE39DA3-BF3A-4351-A7B8-743573D88E0E}"
 EndProject

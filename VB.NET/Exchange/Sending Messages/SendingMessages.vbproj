@@ -9,4 +9,13 @@
     <PackageReference Include="GemBox.Email" Version="*" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="GemBoxEmailLogo.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Update="GemBoxSampleFile.pdf">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

@@ -30,7 +30,7 @@ Module Program
         message.Save("Save.eml")
     End Sub
 
-    Sub Example2
+    Sub Example2()
         ' If using the Professional version, put your serial key below.
         ComponentInfo.SetLicense("FREE-LIMITED-KEY")
 
