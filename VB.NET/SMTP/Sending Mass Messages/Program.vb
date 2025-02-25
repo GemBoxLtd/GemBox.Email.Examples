@@ -47,7 +47,7 @@ Module Program
         End While
     End Sub
 
-    Sub SendEmails(ByVal recipients As IEnumerable(Of String))
+    Sub SendEmails(recipients As IEnumerable(Of String))
 
         Using smtp As New SmtpClient(Host)
             smtp.Connect()
@@ -69,7 +69,7 @@ Module Program
 
     End Sub
 
-    Function SplitMany(ByVal source As List(Of String), ByVal size As Integer) As List(Of List(Of String))
+    Function SplitMany(source As List(Of String), size As Integer) As List(Of List(Of String))
 
         Dim sourceChunks As New List(Of List(Of String))()
 
