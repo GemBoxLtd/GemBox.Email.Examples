@@ -121,6 +121,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ListingFolders", "Microsoft
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SendingMessages", "Microsoft Graph\Sending Messages\SendingMessages.csproj", "{6C35C0CA-6C3C-4D09-99AF-B936AABD7AF4}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UploadingMessages", "IMAP\Uploading Messages\UploadingMessages.csproj", "{8278A317-00BC-9DC3-47BF-438B459BA395}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UploadingMessages", "Exchange\Uploading Messages\UploadingMessages.csproj", "{64423CF6-4B3E-F5EE-EBC1-E0CE4FB8D655}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UploadingMessages", "Microsoft Graph\Uploading Messages\UploadingMessages.csproj", "{A2C2E54F-441A-B56A-F618-F74F3A44A4CF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -327,6 +333,18 @@ Global
 		{6C35C0CA-6C3C-4D09-99AF-B936AABD7AF4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6C35C0CA-6C3C-4D09-99AF-B936AABD7AF4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6C35C0CA-6C3C-4D09-99AF-B936AABD7AF4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8278A317-00BC-9DC3-47BF-438B459BA395}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8278A317-00BC-9DC3-47BF-438B459BA395}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8278A317-00BC-9DC3-47BF-438B459BA395}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8278A317-00BC-9DC3-47BF-438B459BA395}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64423CF6-4B3E-F5EE-EBC1-E0CE4FB8D655}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64423CF6-4B3E-F5EE-EBC1-E0CE4FB8D655}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64423CF6-4B3E-F5EE-EBC1-E0CE4FB8D655}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64423CF6-4B3E-F5EE-EBC1-E0CE4FB8D655}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A2C2E54F-441A-B56A-F618-F74F3A44A4CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A2C2E54F-441A-B56A-F618-F74F3A44A4CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A2C2E54F-441A-B56A-F618-F74F3A44A4CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A2C2E54F-441A-B56A-F618-F74F3A44A4CF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -382,6 +400,9 @@ Global
 		{AD498A54-5FED-4624-A412-0A2829FD2903} = {985900B0-594B-4F58-A2B8-59A0CB99F8B8}
 		{CFF33BA9-352B-42A7-A515-115BF6B3835E} = {985900B0-594B-4F58-A2B8-59A0CB99F8B8}
 		{6C35C0CA-6C3C-4D09-99AF-B936AABD7AF4} = {985900B0-594B-4F58-A2B8-59A0CB99F8B8}
+		{8278A317-00BC-9DC3-47BF-438B459BA395} = {61E303C4-D526-465E-BFD4-3B9858144BD9}
+		{64423CF6-4B3E-F5EE-EBC1-E0CE4FB8D655} = {3EE85BDF-A7D5-4989-A2F8-FECEFEFA7F85}
+		{A2C2E54F-441A-B56A-F618-F74F3A44A4CF} = {985900B0-594B-4F58-A2B8-59A0CB99F8B8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {B1AE71C3-3CE7-4454-952B-64F5A4A078A9}

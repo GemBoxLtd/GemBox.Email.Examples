@@ -1,5 +1,6 @@
 Imports GemBox.Email
 Imports GemBox.Email.Exchange
+Imports GemBox.Email.Graph
 Imports GemBox.Email.Imap
 Imports GemBox.Email.Pop
 Imports GemBox.Email.Smtp
@@ -12,6 +13,7 @@ Module Program
         Example2()
         Example3()
         Example4()
+        Example5()
     End Sub
 
     Sub Example1()
@@ -64,6 +66,16 @@ Module Program
         Dim exchangeClient = New ExchangeClient("<HOST> (e.g. https://outlook.office365.com/EWS/Exchange.asmx)")
         ' Authenticate the client using OAuth 2.0.
         exchangeClient.Authenticate("<USERNAME>", "<ACCESS-TOKEN>", ExchangeAuthentication.OAuth2)
+    End Sub
+
+    Sub Example5()
+        ' If using the Professional version, put your serial key below.
+        ComponentInfo.SetLicense("FREE-LIMITED-KEY")
+
+        ' Create a new Graph client.
+        Dim graphClient = New GraphClient()
+        ' Authenticate the client using OAuth 2.0.
+        graphClient.Authenticate("<ACCESS-TOKEN>")
     End Sub
 
 End Module

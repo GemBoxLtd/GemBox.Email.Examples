@@ -56,7 +56,7 @@ using (SmtpClient smtp = new SmtpClient("<ADDRESS> (e.g. smtp.gmail.com)"))
 }
 ```
 
-For more GemBox.Email code examples and demos, please visit our [examples page](https://www.gemboxsoftware.com/email/examples/c-sharp-vb-net-email-library/201).
+For more GemBox.Email code examples and demos, please visit our [examples page](https://www.gemboxsoftware.com/email/examples/getting-started/201).
 
 ## Installation
 

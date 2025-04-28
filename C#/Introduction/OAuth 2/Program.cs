@@ -1,5 +1,6 @@
 using GemBox.Email;
 using GemBox.Email.Exchange;
+using GemBox.Email.Graph;
 using GemBox.Email.Imap;
 using GemBox.Email.Pop;
 using GemBox.Email.Smtp;
@@ -13,6 +14,7 @@ class Program
         Example2();
         Example3();
         Example4();
+        Example5();
     }
 
     static void Example1()
@@ -69,5 +71,16 @@ class Program
         var exchangeClient = new ExchangeClient("<HOST> (e.g. https://outlook.office365.com/EWS/Exchange.asmx)");
         // Authenticate the client using OAuth 2.0.
         exchangeClient.Authenticate("<USERNAME>", "<ACCESS-TOKEN>", ExchangeAuthentication.OAuth2);
+    }
+
+    static void Example5()
+    {
+        // If using the Professional version, put your serial key below.
+        ComponentInfo.SetLicense("FREE-LIMITED-KEY");
+
+        // Create a new Graph client.
+        var graphClient = new GraphClient();
+        // Authenticate the client using OAuth 2.0.
+        graphClient.Authenticate("<ACCESS-TOKEN>");
     }
 }
