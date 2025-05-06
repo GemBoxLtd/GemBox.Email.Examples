@@ -20,9 +20,11 @@ With GemBox.Email you get a fast and reliable component that's easy to use and d
 - [Search](https://www.gemboxsoftware.com/email/examples/c-sharp-vb-net-search-emails/308) for mail message using IMAP protocol.
 - [Send](https://www.gemboxsoftware.com/email/examples/send-email-exchange-ews/1001), [list, and download](https://www.gemboxsoftware.com/email/examples/manipulate-messages-exchange-ews/1002) messages on the Exchange Server using EWS protocol.
 - [List and modify](https://www.gemboxsoftware.com/email/examples/modify-folders-exchange-ews/1003) folders on the Exchange Server using the EWS protocol.
+- [Send](https://www.gemboxsoftware.com/email/examples/send-email-microsoft-graph/3001), [list, and download](https://www.gemboxsoftware.com/email/examples/manipulate-messages-microsoft-graph/3002) messages on the Office 365 Server using Microsoft Graph API.
+- [List and modify](https://www.gemboxsoftware.com/email/examples/modify-folders-microsoft-graph/3003) folders on the Office 365 Server using Microsoft Graph API.
 - Custom [SSL certificate validation](https://www.gemboxsoftware.com/email/examples/ssl-certificate-validation-pop/706) when connecting to mail server.
 - [Validate mail addresses](https://www.gemboxsoftware.com/email/examples/c-sharp-validate-email/401).
-- [Sign, unsign](https://www.gemboxsoftware.com/email/examples/c-sharp-vb-net-sign-email/1202), and [validate](https://www.gemboxsoftware.com/email/examples/c-sharp-vb-net-validate-signed-email/1201) emails.
+- [Sign, unsign](https://www.gemboxsoftware.com/email/examples/c-sharp-vb-net-sign-email/1202), and [validate](https://www.gemboxsoftware.com/email/examples/c-sharp-vb-net-sign-email/1202) emails.
 - Create [personalized mail messages](https://www.gemboxsoftware.com/email/examples/c-sharp-vb-net-mail-merge-datatable/501) based on a single template and variable data.
 - [Load](https://www.gemboxsoftware.com/email/examples/load-calendar/902) and [save](https://www.gemboxsoftware.com/email/examples/create-and-save-calendar/901) calendars in iCalendar format.
 - [Create and add](https://www.gemboxsoftware.com/email/examples/add-calendar-to-mail-message/903) calendar events, tasks, and reminders to an email.
