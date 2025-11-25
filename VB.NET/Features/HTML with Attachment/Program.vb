@@ -24,7 +24,7 @@ Module Program
             "</body></html>"
 
         ' Add image as inline attachment.
-        message.Attachments.Add(New Attachment("GemBoxEmailLogo.png") With {.ContentId = cid})
+        message.Attachments.AddInline(New Attachment("GemBoxEmailLogo.png") With {.ContentId = cid})
 
         ' Add file as attachment.
         message.Attachments.Add(New Attachment("GemBoxSampleFile.pdf"))

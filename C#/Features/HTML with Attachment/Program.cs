@@ -24,7 +24,7 @@ class Program
             "</body></html>";
 
         // Add image as inline attachment.
-        message.Attachments.Add(new Attachment("GemBoxEmailLogo.png") { ContentId = cid });
+        message.Attachments.AddInline(new Attachment("GemBoxEmailLogo.png") { ContentId = cid });
 
         // Add file as attachment.
         message.Attachments.Add(new Attachment("GemBoxSampleFile.pdf"));
