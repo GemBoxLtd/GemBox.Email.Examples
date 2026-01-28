@@ -64,6 +64,10 @@ For more GemBox.Email code examples and demos, please visit our [examples page](
 
 You can download GemBox.Email from [NuGet 📦](https://www.nuget.org/packages/GemBox.Email/) or from [Downloads 🛠️](https://www.gemboxsoftware.com/email/downloads/).
 
+## AI Coding
+
+CLI coding agents such as GitHub Copilot, Claude Code, and OpenAI Codex can write valid GemBox code [when enabled with our gembox-skill](https://www.gemboxsoftware.com/support/ai-coding).
+
 ## Resources
 
 - [Product Page](https://www.gemboxsoftware.com/email)
