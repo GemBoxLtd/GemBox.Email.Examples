@@ -1,4 +1,4 @@
-[![NuGet version](https://img.shields.io/nuget/v/GemBox.Email?style=for-the-badge)](https://www.nuget.org/packages/GemBox.Email/) [![NuGet downloads](https://img.shields.io/nuget/dt/GemBox.Email?style=for-the-badge)](https://www.nuget.org/packages/GemBox.Email/) [![Visual Studio Marketplace rating](https://img.shields.io/visual-studio-marketplace/stars/GemBoxSoftware.GemBoxEmail?style=for-the-badge)](https://marketplace.visualstudio.com/items?itemName=GemBoxSoftware.GemBoxEmail)
+[![NuGet version](https://img.shields.io/nuget/v/GemBox.Email?style=for-the-badge)](https://www.nuget.org/packages/GemBox.Email/) [![NuGet downloads](https://img.shields.io/nuget/dt/GemBox.Email?style=for-the-badge)](https://www.nuget.org/packages/GemBox.Email/)
 
 [![GemBox.Email .NET Email library](https://www.gemboxsoftware.com/img/banners/gembox-gbe-banner.png)](https://www.gemboxsoftware.com/email/examples/getting-started/201)
 
